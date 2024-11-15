@@ -1,16 +1,15 @@
 :root {
-    --bgShadow: #B7B8B6;
-    --bgStone: #4CB5F5;
-    --bgMist: #B3C100;
-    --fontColor: #34675C;
-    --fontColorSun: #000;
+    --primary: #6750A4;
+    --bgPrimary: #FFFFFF;
+    --primaryContainer: #EADDFF;
+    --onPrimaryContainer: #4F378B;
 }
 
 .dark-mode {
-    --bgShadow: #121212;
-    --bgStone: #333333;
-    --bgMist: #1A3B53;
-    --fontColor: #FDF9EE;
+    --primary: #322F35;
+    --bgPrimary: #322F35;
+    --primaryContainer: #ECE6F0;
+    --onPrimaryContainer: #1D1B20;
 }
 
 * {
@@ -20,7 +19,7 @@
 .text-profile {
     display: flex;
     flex-direction: column;
-    color: var(--fontColorSun);
+    color: var(--onPrimaryContainer);
     justify-content: center;
 }
 
@@ -29,7 +28,7 @@
 }
 
 .text-profile span {
-    background-color: var(--bgMist);
+    background-color: var(--primaryContainer);
     border-radius: 1rem;
     padding: .2rem;
 }
@@ -38,7 +37,7 @@
     text-align: right;
     text-decoration: underline;
     text-decoration-thickness: .15rem;
-    text-decoration-color: var(--bgMist);
+    text-decoration-color: var(--bgPrimary);
 }
 
 .body {
@@ -46,14 +45,14 @@
     border-radius: 2rem;
     box-shadow: 1rem 1rem;
     border-radius: 1.6rem;
-    box-shadow: 0 4px 30px var(--bgShadow);
-    border: 1px solid var(--bgStone);
+    box-shadow: 0 4px 30px var(--primaryContainer);
+    border: 1px solid var(--onPrimaryContainer);
     padding: 1rem 0 1rem 0;
 }
 
 .togle {
     margin-left: 89%;
-    background-color: var(--bgShadow);
+    background-color: var(--onPrimaryContainer);
     width: 4rem;
     height: 2rem;
     padding: 0;
@@ -61,8 +60,8 @@
 }
 
 .togle-button {
-    background-color: var(--fontColor);
-    background-image: url("resources/sun.png");
+    background-color: var(--primaryContainer);
+    background-image: url("resources/moon.png");
     background-size: 70%;
     background-repeat: no-repeat;
     background-position: center;
@@ -76,7 +75,7 @@
 
 .togle-button-isActive {
     transform: translateX(2rem) rotate(360deg);
-    background-image: url("resources/moon.png");
+    background-image: url("resources/sun.png");
 }
 
 .icon {
@@ -109,8 +108,8 @@
 .header {
     display: flex;
     margin-top: 1rem;
-    background-color: var(--bgStone);
-    color: var(--fontColor);
+    background-color: var(--primaryContainer);
+    color: var(--onPrimaryContainer);
 }
 
 .header div {
@@ -123,21 +122,21 @@
 }
 
 .main aside {
-    background-color: var(--bgMist);
-    color: var(--fontColor);
+    background-color: var(--primary);
+    color: var(--primaryContainer);
     padding: 1rem;
     width: 40%;
 }
 
 .main section {
-    background-color: var(--bgMist);
-    color: var(--fontColor);
+    background-color: var(--onPrimaryContainer);
+    color: var(--primaryContainer);
     padding: 1rem;
     width: 60%;
 }
 
 .line {
-    background-color: var(--fontColor);
+    background-color: var(--onPrimaryContainer);
     height: .1rem;
     margin: 2rem 0.5rem 2rem 0.5rem;
 }
@@ -146,13 +145,13 @@
     padding: .1rem;
     width: 10rem;
     height: .5rem;
-    background-color: var(--bgShadow);
+    background-color: var(--primaryContainer);
     border-radius: 1rem;
     overflow: hidden;
 }
 
 .prog {
-    background-color: var(--bgStone);
+    background-color: var(--onPrimaryContainer);
     width: 0%;
     height: 100%;
     border-radius: 1rem;
@@ -173,7 +172,7 @@ td {
 
 
 .webLink {
-    color: var(--fontColor);
+    color: var(--primaryContainer);
 }
 
 .webLink:hover {
@@ -201,29 +200,15 @@ td {
     margin-bottom: 20px;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    margin: 2rem;
-}
-
-.form input,
-.form textarea {
-    width: 100%;
-    padding-left: .5rem;
-    border: .1rem solid var(--fontColor);
-    border-radius: .5rem;
-}
-
 .button {
     height: 2rem;
     width: 10rem;
-    background-color: var(--bgStone);
-    color: var(--fontColor);
+    background-color: var(--primaryContainer);
+    color: var(--onPrimaryContainer);
     border-radius: 2rem;
     border: none;
     cursor: pointer;
-    box-shadow: .2rem .2rem .1rem var(--bgShadow);
+    box-shadow: .2rem .2rem .1rem var(--primary);
     margin-top: .5rem;
     transition: background-color 0.3s ease-out;
 }
@@ -297,12 +282,12 @@ td {
 footer {
     padding: 1.5rem;
     text-align: center;
-    background-color: var(--fontColor);
+    background-color: var(--primaryContainer);
 }
 
 footer a {
     text-decoration: none;
-    color: var(--bgShadow);
+    color: var(--primary);
 }
 
 p {
@@ -315,3 +300,36 @@ ul {
     list-style-type: none;
     font-size: 1rem;
 }
+
+/* ... your existing styles ... */
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding-left: .5rem;
+    border: .1rem solid var(--primary);
+    border-radius: .5rem;
+}
+.error-message {
+    display: none;
+    color: var(--primaryContainer);
+    font-size: .7rem;
+    margin-left: .2rem;
+    
+  }
+  
+  .form input:invalid + .error-message {
+    display: inline;
+  }
+  
+  .form input:valid + .error-message,
+  .form textarea:valid + .error-message {
+    display: none;
+  }
+  
