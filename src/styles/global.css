@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@import "tailwindcss-animated";
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Dosis:wght@200..800&family=Oxygen:wght@300;400;700&family=Schoolbell&family=Sniglet:wght@400;800&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+
+@theme {
+    --color-mirage-50: #f0f7fe;
+    --color-mirage-100: #deecfb;
+    --color-mirage-200: #c4e0f9;
+    --color-mirage-300: #9cccf4;
+    --color-mirage-400: #6dafed;
+    --color-mirage-500: #4b90e6;
+    --color-mirage-600: #3674da;
+    --color-mirage-700: #2d60c8;
+    --color-mirage-800: #2a4fa3;
+    --color-mirage-900: #274481;
+    --color-mirage-950: #0f172a;
+
+    --color-evening-sea-50: #f0fdfc;
+    --color-evening-sea-100: #ccfbf8;
+    --color-evening-sea-200: #99f6f0;
+    --color-evening-sea-300: #5eeae1;
+    --color-evening-sea-400: #2dd4c9;
+    --color-evening-sea-500: #14b8ad;
+    --color-evening-sea-600: #0d948b;
+    --color-evening-sea-700: #0f766f;
+    --color-evening-sea-800: #115e59;
+    --color-evening-sea-900: #134e4a;
+    --color-evening-sea-950: #042f2c;
+
+    --color-bright-turquoise-50: #f0fdfb;
+    --color-bright-turquoise-100: #ccfbf4;
+    --color-bright-turquoise-200: #99f6e7;
+    --color-bright-turquoise-300: #5eead4;
+    --color-bright-turquoise-400: #2dd4ba;
+    --color-bright-turquoise-500: #14b89e;
+    --color-bright-turquoise-600: #0d947f;
+    --color-bright-turquoise-700: #0f7666;
+    --color-bright-turquoise-800: #115e52;
+    --color-bright-turquoise-900: #134e45;
+    --color-bright-turquoise-950: #042f28;
+
+    --color-river-bed-50: #f4f6f7;
+    --color-river-bed-100: #e3e7ea;
+    --color-river-bed-200: #cad2d7;
+    --color-river-bed-300: #a6b3ba;
+    --color-river-bed-400: #7a8c96;
+    --color-river-bed-500: #5e6f7c;
+    --color-river-bed-600: #515e69;
+    --color-river-bed-700: #48525b;
+    --color-river-bed-800: #3e454c;
+    --color-river-bed-900: #373c42;
+    --color-river-bed-950: #22262a;
+
+    --color-shark-50: #f6f7f9;
+    --color-shark-100: #edeef1;
+    --color-shark-200: #d6dbe1;
+    --color-shark-300: #b3bcc6;
+    --color-shark-400: #8997a7;
+    --color-shark-500: #6b7b8c;
+    --color-shark-600: #566273;
+    --color-shark-700: #46505e;
+    --color-shark-800: #3c4550;
+    --color-shark-900: #363c44;
+    --color-shark-950: #1d2025;
+
+    --color-tundora-50: #f6f5f5;
+    --color-tundora-100: #e8e5e5;
+    --color-tundora-200: #d3cece;
+    --color-tundora-300: #b4aeac;
+    --color-tundora-400: #8e8582;
+    --color-tundora-500: #736a67;
+    --color-tundora-600: #625b58;
+    --color-tundora-700: #534e4b;
+    --color-tundora-800: #4d4947;
+    --color-tundora-900: #3f3b3a;
+    --color-tundora-950: #282524;
+
+    --color-outer-space-50: #f4f7f7;
+    --color-outer-space-100: #e3e8ea;
+    --color-outer-space-200: #cad4d7;
+    --color-outer-space-300: #a5b5bb;
+    --color-outer-space-400: #798f97;
+    --color-outer-space-500: #5e747c;
+    --color-outer-space-600: #50626a;
+    --color-outer-space-700: #455159;
+    --color-outer-space-800: #3e474c;
+    --color-outer-space-900: #30363a;
+    --color-outer-space-950: #22272a;
+
+    --color-blue-black: #021C1E;
+    --color-cadet: #004445;
+
+    --font-Title: "Dosis", "Helvetica Neue";
+    --font-Content: "Oxygen", "Helvetica Neue";
+    --font-Special: "Schoolbell", cursive;
+    --font-Special2: "Sniglet", system-ui;
+    --font-Special3: "Chewy", system-ui;
+    --font-Special4: "Sour Gummy", sans-serif;
+}
