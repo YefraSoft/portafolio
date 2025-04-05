@@ -1,80 +1,98 @@
 ---
 const navItems = [
-  { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Contact', href: '#contact' },
+  { name: "Contact", href: "/contact" },
+  { name: "Curriculum", href: "/curriculum" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Posts", href: "/posts" },
+  { name: "Projects", href: "/projects" },
 ];
 ---
 
-<header class="fixed w-full bg-primary-950 opacity-90 rounded-b-md backdrop-blur-xs z-50 font-Dosis">
-  <nav class="container mx-auto px-6 py-2  text-gray-300 transition-all">
+<header
+  class="fixed w-full bg-primary-950 rounded-b-md backdrop-blur-xs z-50 font-Dosis"
+>
+  <nav class="container mx-auto px-6 py-2 text-gray-300 transition-all">
     <section class="flex items-center justify-between">
       <div class="flex items-center gap-4">
         <div class="w-12 h-12 rounded-full overflow-hidden">
-          <img 
-            src="/profile.jpg"
+          <img
+            src="/favicon.svg"
             alt="Profile"
-            class="w-full h-full object-cover hover:scale-110 transition-transform "
+            class="w-full h-full object-cover hover:scale-110 transition-transform"
           />
         </div>
-        <a href="#" class="from-tertiary-400 to-tertiary-500 text-2xl font-semibold bg-gradient-to-r text-transparent bg-clip-text hover:from-bright-turquoise-400 transition-colors duration-300">
-          Efrain Garcia Suarez
+        <a
+          href="/"
+          class="from-tertiary-400 to-tertiary-500 text-2xl font-semibold bg-gradient-to-r text-transparent bg-clip-text hover:from-bright-turquoise-400 transition-colors duration-300"
+        >
+          Yefrasoft
         </a>
       </div>
-      
-      <!-- Desktop Navigation -->
       <ul class="hidden md:flex space-x-8">
-        {navItems.map(item => (
-          <li>
-            <a 
-              href={item.href}
-              class="hover:scale-105 hover:text-gray-200 inline-block duration-200"
-            >
-              {item.name}
-            </a>
-          </li>
-        ))}
+        {
+          navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="hover:scale-105 hover:text-gray-200 inline-block duration-200"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
-
-      <!-- Mobile Menu Button -->
-      <button class="md:hidden text-gray-400 active:scale-110 duration-300" id="menuButton">
-        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+      <button
+        class="md:hidden text-gray-400 active:scale-110 duration-300"
+        id="menuButton"
+      >
+        <svg
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
       </button>
     </section>
-
-    <!-- Mobile Navigation -->
-    <section class="md:hidden hidden animate-fade-down animate-once animate-ease-in-out animate-duration-300" id="mobileMenu">
+    <section
+      class="md:hidden hidden animate-fade-down animate-once animate-ease-in-out animate-duration-300"
+      id="mobileMenu"
+    >
       <ul class="pt-4 pb-2">
-        {navItems.map(item => (
-          <li>
-            <a 
-              href={item.href}
-              class="block py-2 hover:text-gray-200 transition-colors duration-300"
-            >
-              {item.name}
-            </a>
-          </li>
-        ))}
+        {
+          navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class="block py-2 hover:text-gray-200 transition-colors duration-300"
+              >
+                {item.name}
+              </a>
+            </li>
+          ))
+        }
       </ul>
     </section>
   </nav>
 </header>
 
 <script>
-  const menuButton = document.getElementById('menuButton');
-  const mobileMenu = document.getElementById('mobileMenu');
+  const menuButton = document.getElementById("menuButton");
+  const mobileMenu = document.getElementById("mobileMenu");
 
-  menuButton?.addEventListener('click', () => {
-    mobileMenu?.classList.toggle('hidden');
+  menuButton?.addEventListener("click", () => {
+    mobileMenu?.classList.toggle("hidden");
   });
-  const mobileLinks = mobileMenu?.querySelectorAll('a');
-  mobileLinks?.forEach(link => {
-    link.addEventListener('click', () => {
-      mobileMenu?.classList.add('hidden');
+  const mobileLinks = mobileMenu?.querySelectorAll("a");
+  mobileLinks?.forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu?.classList.add("hidden");
     });
   });
 </script>

@@ -1,0 +1,31 @@
+---
+interface Props {
+  namePost: string;
+}
+const { namePost }: Props = Astro.props;
+---
+
+<article class="flex flex-col my-3 items-center justify-center font-Title bg-champagne p-3 rounded-2xl">
+  <section class="flex items-center gap-4">
+    <img
+      src="https://res.cloudinary.com/yefrasoft/image/upload/v1743822052/profile_l5wsfc.webp"
+      alt="ProfilePotho"
+      class="w-16 h-16 object-cover hover:scale-110 transition-transform rounded-full"
+    />
+    <div class="flex flex-col">
+      <a title="About me"
+        href="/about"
+        class="from-midnight-blue to-penn-blue text-2xl font-semibold bg-gradient-to-r text-transparent bg-clip-text hover:from-bright-turquoise-400 transition-colors duration-300"
+      >
+        Efrain Garcia
+      </a>
+      <time class="text-xs" datetime="04/04/2025">4 de abril de 2025</time>
+      <section class="flex justify-between py-1">
+        <i class="far fa-thumbs-up text-lg"></i>
+        <a href="#comment-form"><i class="far fa-comment-dots text-lg"></i></a>
+        <i class="far fa-share-square text-lg"></i>
+      </section>
+    </div>
+  </section>
+  <p class="text-sm italic"><b>Post:</b>{namePost}</p>
+</article>

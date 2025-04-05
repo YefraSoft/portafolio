@@ -1,0 +1,36 @@
+---
+interface Props {
+  imageUrl: string;
+  description: {
+    figure: string;
+    text: string;
+  };
+  linkUrl: string;
+  floatDirection: string;
+  width: string;
+  minWidth: string;
+  variants?: string;
+}
+
+const {
+  imageUrl,
+  description,
+  linkUrl,
+  floatDirection,
+  width,
+  minWidth,
+  variants,
+}: Props = Astro.props;
+---
+
+<blockquote
+  class={`cursor-pointer transition-transform transform hover:scale-105 float-${floatDirection} min-w-${minWidth} w-${width} ${variants}`}
+  onclick={`window.location.href='${linkUrl}'`}
+  title="Seguir imagen"
+>
+  <img src={imageUrl} alt={description.text} class="rounded-lg" />
+  <footer class="text-xs">
+    <b>Figura {description.figure}:</b>
+    {description.text}
+  </footer>
+</blockquote>

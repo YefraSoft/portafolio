@@ -1,0 +1,71 @@
+---
+interface IPost {
+  N: string;
+  Title: string;
+  Content: string;
+  Link: {
+    href: string;
+  };
+}
+
+interface Props {
+  rows: IPost[];
+}
+const { rows }: Props = Astro.props;
+---
+
+<table class="overflow-hidden shadow-md rounded-lg bg-chinese-violet">
+  <thead class="block text-center font-Title">
+    <tr class="flex space-x-2 text-sm md:text-lg p-2">
+      <th
+        class="bg-champagne block basis-6 rounded-lg shadow-orange-300 shadow-hard ring-1 ring-black"
+        >#</th
+      >
+      <th
+        class="bg-champagne block basis-2/5 rounded-lg shadow-cyan-300 shadow-hard ring-1 ring-black"
+        >Title</th
+      >
+      <th
+        class="bg-champagne block basis-2/5 rounded-lg shadow-teal-300 shadow-hard ring-1 ring-black"
+        >Content</th
+      >
+      <th
+        class="bg-champagne block basis-1/5 rounded-lg shadow-indigo-300 shadow-hard ring-1 ring-black"
+        >Link</th
+      >
+    </tr>
+  </thead>
+  <tbody class="block mt-5 text-center font-Content">
+    {
+      rows.map((row) => (
+        <tr class="flex space-x-2 px-2 pb-3 text-xs md:text-lg">
+          <td class="flex basis-6 items-center justify-center font-bold">
+            <p class="bg-orange-300 rounded-sm ring-2 ring-gray-700 p-1 shadow-orange-600 shadow-md">
+              {row.N}
+            </p>
+          </td>
+          <td class="basis-2/5">
+            <div class="bg-cyan-300 rounded-xl ring-2 ring-gray-700 p-1 shadow-cyan-600 shadow-md ">
+              <h2 class="text-justify">
+                <strong>{row.Title}</strong>
+              </h2>
+            </div>
+          </td>
+          <td class="basis-2/5 text-justify">
+            <p class="bg-teal-300 rounded-xl ring-2 ring-gray-700 p-1 shadow-teal-600 shadow-md">
+              {row.Content}
+            </p>
+          </td>
+          <td class="flex font-bold basis-1/5 justify-center items-center animate-wiggle animate-infinite">
+            <a
+              href={row.Link.href}
+              class="bg-indigo-300 rounded-xl ring-2 ring-gray-700 p-1 shadow-indigo-600 shadow-md"
+            >
+              &#128073; Leer aqui
+            </a>
+          </td>
+        </tr>
+      ))
+    }
+  </tbody>
+</table>

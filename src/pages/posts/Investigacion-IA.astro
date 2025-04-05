@@ -1,0 +1,1205 @@
+---
+import Comments from "../../components/comments.astro";
+import Navbar from "../../components/Navbar.astro";
+import RatePost from "../../components/RatePost.astro";
+import ReferenceImage from "../../components/ReferenceImage.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const images = {
+  ErrorEnComunicacion: {
+    imageUrl:
+      "https://eolocomunicacion.com/wp-content/uploads/2023/02/campana-de-comunicacion.jpg",
+    description: {
+      figure: "2",
+      text: "Falta de entendimiento en la comunicación",
+    },
+    linkUrl:
+      "https://eolocomunicacion.com/como-hacer-una-campana-de-comunicacion/",
+    floatDirection: "right",
+    width: "2/5",
+    minWidth: "52",
+    variants: "m-4",
+  },
+  Filosofia: {
+    imageUrl:
+      "https://0701.static.prezi.com/preview/v2/5twsvm2735w346mfttev2xaxmt6jc3sachvcdoaizecfr3dnitcq_3_0.png",
+    description: {
+      figure: "1",
+      text: "Conceptos del lenguaje",
+    },
+    linkUrl: "https://prezi.com/p/2nvr6ww9d9ae/filosofia-del-lenguaje/",
+    floatDirection: "none",
+    width: "full",
+    minWidth: "52",
+  },
+  AcertiveComunication: {
+    imageUrl:
+      "https://assets.isu.pub/document-structure/221019025952-6a457d88410b62a99526f00d87febe0c/v1/7c3826c6a2d99daa15632ae125e814bb.jpeg",
+    description: {
+      figure: "3",
+      text: "La información es comprendida por emisor y receptor",
+    },
+    linkUrl: "https://issuu.com/oscararaya123/docs/revista_v1/s/17137438",
+    floatDirection: "left",
+    width: "2/5",
+    minWidth: "52",
+    variants: "m-4",
+  },
+  mpathic: {
+    imageUrl:
+      "https://images.squarespace-cdn.com/content/v1/60abe84cacf158396e24d38b/1625258701320-T1LQ9CFHHHJRHGKPIMZL/Mpathic+icon+%28RGB%29.png?format=500w",
+    description: {
+      figure: "3",
+      text: "Empresa líder en análisis conversacional impulsado por inteligencia artificial",
+    },
+    linkUrl: "https://issuu.com/oscararaya123/docs/revista_v1/s/17137438",
+    floatDirection: "right",
+    width: "2/5",
+    minWidth: "46",
+    variants: "m-4",
+  },
+  Lud: {
+    imageUrl:
+      "https://www.biografiasyvidas.com/biografia/w/fotos/wittgenstein.jpg",
+    description: {
+      figure: "4",
+      text: "Wittgenstein: Filósofo británico de origen austríaco.",
+    },
+    linkUrl: "https://www.biografiasyvidas.com/biografia/w/wittgenstein.htm",
+    floatDirection: "left",
+    width: "2/5",
+    minWidth: "46",
+    variants: "m-4",
+  },
+  pubEf: {
+    imageUrl:
+      "https://cecymadero.com/wp-content/uploads/2017/02/publicidad-efectiva-en-4-pasos-600x385.jpg",
+    description: {
+      figure: "5",
+      text: "Requisitos para una publicidad efectiva.",
+    },
+    linkUrl: "https://cecymadero.com/4-pasos-una-campana-publicidad-efectiva",
+    floatDirection: "left",
+    width: "2/5",
+    minWidth: "52",
+    variants: "m-4",
+  },
+  demoCon: {
+    imageUrl:
+      "https://www.instituthumanitats.org/sites/default/files/styles/card/public/audio/imatge/biblioteca_web_cccb__2.png?h=af6aec73&itok=_EApVlyo",
+    description: {
+      figure: "6",
+      text: "La democratización del conocimiento. La “sed de cultura” y la biblioteca popular.",
+    },
+    linkUrl:
+      "https://www.instituthumanitats.org/es/documentos/audios/4-6-la-democratizacion-del-conocimiento-la-sed-de-cultura-y-la-biblioteca-popular",
+    floatDirection: "right",
+    width: "2/5",
+    minWidth: "46",
+    variants: "m-4",
+  },
+  manipulacion: {
+    imageUrl:
+      "https://www.shutterstock.com/shutterstock/photos/1991281511/display_1500/stock-vector-mind-manipulation-concept-illustration-with-puppet-master-hands-confuses-or-manipulates-thoughts-of-1991281511.jpg",
+    description: {
+      figure: "7",
+      text: "Concepto de manipulación mental con manos maestras, manipula pensamientos aislados en un fondo blanco.",
+    },
+    linkUrl:
+      "https://www.instituthumanitats.org/es/documentos/audios/4-6-la-democratizacion-del-conocimiento-la-sed-de-cultura-y-la-biblioteca-popular",
+    floatDirection: "left",
+    width: "2/5",
+    minWidth: "48",
+    variants: "m-4",
+  },
+  digiRex: {
+    imageUrl:
+      "https://plus.unsplash.com/premium_photo-1742082371099-aa9bec9f0b07?q=80&w=1952&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    description: {
+      figure: "8",
+      text: "Hombre mirando el reflejo de un retrato digital.",
+    },
+    linkUrl:
+      "https://unsplash.com/es/fotos/hombre-mirando-el-reflejo-de-un-retrato-digital-hOF6VQWguKc",
+    floatDirection: "right",
+    width: "2/5",
+    minWidth: "52",
+    variants: "m-4",
+  },
+  bigFive: {
+    imageUrl:
+      "https://www.aiteco.com/webgestion/wp-content/uploads/big-five-personalidad.png",
+    description: {
+      figure: "8",
+      text: "Modelo Big Five o de los Cinco Factores de Personalidad",
+    },
+    linkUrl:
+      "https://www.aiteco.com/modelo-big-five-de-personalidad-y-seleccion/",
+    floatDirection: "left",
+    width: "2/5",
+    minWidth: "48",
+    variants: "m-4",
+  },
+  Ia: {
+    imageUrl:
+      "https://img.computing.es/wp-content/uploads/2024/03/22155324/IA-2-1024x576.jpg.webp",
+    description: {
+      figure: "9",
+      text: "Conoce todos los integrantes de la gran familia de la inteligencia artificial",
+    },
+    linkUrl:
+      "https://www.computing.es/a-fondo/tipos-de-inteligencia-artificial/",
+    floatDirection: "right",
+    width: "2/5",
+    minWidth: "52",
+    variants: "m-4",
+  },
+  psico: {
+    imageUrl:
+      "https://image.isu.pub/200413230348-4e4bcdf033b4d0bddbde804b31305321/jpg/page_1_thumb_large.jpg",
+    description: {
+      figure: "10",
+      text: "Psicología Cognitiva. Estrategias y Modelos.",
+    },
+    linkUrl:
+      "https://issuu.com/cassandrapaz181110034/docs/revista_1_8c68626a6e5325/1",
+    floatDirection: "left",
+    width: "2/5",
+    minWidth: "52",
+    variants: "m-4",
+  },
+  psicoLe: {
+    imageUrl: "https://imagenes.espaciologopedico.com/rev/3/3512.jpg",
+    description: {
+      figure: "11",
+      text: "La Psicolingüística en el siglo XXI.",
+    },
+    linkUrl:
+      "https://www.espaciologopedico.com/revista/articulo/3512/la-psicolinguistica-en-el-siglo-xxi-parte-i.html",
+    floatDirection: "left",
+    width: "2/5",
+    minWidth: "50",
+    variants: "m-4",
+  },
+  filoLe: {
+    imageUrl:
+      "https://ficop.info/media/k2/items/cache/9f6d22dec5a20bcdd01cd84e98637764_L.jpg?t=20221114_053750",
+    description: {
+      figure: "11",
+      text: "La Filosofía del Lenguaje",
+    },
+    linkUrl:
+      "https://ficop.info/index.php/ensayos-ficop/item/160-la-filosofia-del-lenguaje",
+    floatDirection: "left",
+    width: "2/5",
+    minWidth: "52",
+    variants: "m-4",
+  },
+  natLen: {
+    imageUrl:
+      "https://blogs.iadb.org/conocimiento-abierto/wp-content/uploads/sites/10/2017/06/NLP-banner2.jpg",
+    description: {
+      figure: "8",
+      text: "¿Qué es el Procesamiento de Lenguaje Natural y cómo ponerlo en práctica con recursos abiertos?",
+    },
+    linkUrl:
+      "https://blogs.iadb.org/conocimiento-abierto/es/que-es-el-procesamiento-de-lenguaje-natural-y-como-ponerlo-en-practica-con-recursos-abiertos/",
+    floatDirection: "left",
+    width: "2/5",
+    minWidth: "52",
+    variants: "m-4",
+  },
+};
+---
+
+<Layout title="posts">
+  <Navbar />
+  <main class="pt-18 mx-10 text-justify space-y-3 font-Content">
+    <RatePost
+      namePost="La capacidad de la inteligencia artificial para comprender el significado de las palabras."
+    />
+    <nav>
+      <h2 class="text-2xl font-semibold mb-2">Índice</h2>
+      <ul class="list-disc ml-6">
+        <li>
+          <a href="#objetivo" class="text-blue-500 hover:underline">Objetivo</a>
+        </li>
+        <li>
+          <a
+            href="#planteamiento-del-problema"
+            class="text-blue-500 hover:underline">Planteamiento del problema</a
+          >
+        </li>
+        <li>
+          <a href="#justificacion" class="text-blue-500 hover:underline"
+            >Justificación</a
+          >
+        </li>
+        <li>
+          <a href="#impactos" class="text-blue-500 hover:underline">Impactos</a>
+        </li>
+        <li>
+          <a
+            href="#preguntas-de-investigacion"
+            class="text-blue-500 hover:underline">Preguntas de Investigación</a
+          >
+        </li>
+        <li>
+          <a href="#hipotesis" class="text-blue-500 hover:underline"
+            >Hipótesis</a
+          >
+        </li>
+        <li>
+          <a href="#marco-teorico" class="text-blue-500 hover:underline"
+            >Marco Teórico</a
+          >
+        </li>
+        <li>
+          <a href="#glosario" class="text-blue-500 hover:underline">Glosario</a>
+        </li>
+        <li>
+          <a href="#conclusion" class="text-blue-500 hover:underline"
+            >Conclusión</a
+          >
+        </li>
+        <li>
+          <a href="#viabilidad" class="text-blue-500 hover:underline"
+            >Viabilidad</a
+          >
+        </li>
+        <li>
+          <a href="#validacion" class="text-blue-500 hover:underline"
+            >Validación</a
+          >
+        </li>
+        <li>
+          <a
+            href="#analisis-de-alternativas"
+            class="text-blue-500 hover:underline"
+            >Análisis de Alternativas de Solución</a
+          >
+        </li>
+        <li>
+          <a href="#bibliografia" class="text-blue-500 hover:underline"
+            >Bibliografía</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <section>
+      <ReferenceImage
+        imageUrl={images.Filosofia.imageUrl}
+        description={images.Filosofia.description}
+        linkUrl={images.Filosofia.linkUrl}
+        floatDirection={images.Filosofia.floatDirection}
+        width={images.Filosofia.width}
+        minWidth={images.Filosofia.minWidth}
+      />
+      <h1 class="text-2xl font-bold mb-4 font-Title indent-12">
+        La capacidad de la inteligencia artificial para comprender el
+        significado psicológico de las palabras expresadas por los usuarios.
+      </h1>
+    </section>
+    <section>
+      <h2 id="objetivo" class="text-2xl font-semibold mb-2">Objetivo</h2>
+      <ReferenceImage
+        imageUrl={images.ErrorEnComunicacion.imageUrl}
+        description={images.ErrorEnComunicacion.description}
+        linkUrl={images.ErrorEnComunicacion.linkUrl}
+        floatDirection={images.ErrorEnComunicacion.floatDirection}
+        width={images.ErrorEnComunicacion.width}
+        minWidth={images.ErrorEnComunicacion.minWidth}
+        variants={images.ErrorEnComunicacion.variants}
+      />
+      <p class="indent-12">
+        Analizar la viabilidad de una IA capaz de comprender el significado
+        psicológico de las palabras expresadas por un usuario, analizando cómo
+        la IA puede interpretar las <em>emociones</em>, las intenciones y el
+        contexto cultural y personal que influyen en el uso del lenguaje. El
+        objetivo es investigar una posible alternativa para mejorar la
+        comunicación humana a través de la IA, analizando diferentes enfoques y
+        tecnologías que podrían permitir a una IA comprender el <em
+          >significado psicológico</em
+        > de las palabras. El estudio se centrará en cualquier persona que interactúe
+        con la tecnología en un contexto digital, para entender cómo
+        <b>la IA podría mejorar la interacción</b>.
+      </p>
+    </section>
+    <hr />
+    <section>
+      <h2 id="planteamiento-del-problema" class="text-2xl font-semibold mb-2">
+        Planteamiento del problema
+      </h2>
+      <ReferenceImage
+        imageUrl={images.AcertiveComunication.imageUrl}
+        description={images.AcertiveComunication.description}
+        linkUrl={images.AcertiveComunication.linkUrl}
+        floatDirection={images.AcertiveComunication.floatDirection}
+        width={images.AcertiveComunication.width}
+        minWidth={images.AcertiveComunication.minWidth}
+        variants={images.AcertiveComunication.variants}
+      />
+      <p>
+        El problema central es la <b>falta de comunicación efectiva</b> entre las
+        personas debido a la complejidad del lenguaje y la diversidad de interpretaciones.
+        Las palabras pueden tener diferentes significados para diferentes personas,
+        y la falta de comprensión del contexto emocional y psicológico puede llevar
+        a <b>malentendidos</b> y <b>conflictos</b>. La comunicación efectiva es
+        fundamental para el bienestar individual y social, y abordar este
+        problema podría mejorar las <b>relaciones interpersonales</b>, reducir
+        los conflictos y facilitar la colaboración en diversos ámbitos. Las
+        causas de la falta de comunicación efectiva son diversas, incluyendo <em
+          >diferencias culturales</em
+        >, experiencias personales, emociones y el uso ambiguo del lenguaje. Las
+        consecuencias pueden ser <b>malentendidos</b>, <b>conflictos</b>,
+        frustración, aislamiento y dificultades en la resolución de problemas.
+        Existen investigaciones previas en áreas como la psicolingüística, la
+        semántica, la pragmática y la inteligencia artificial que abordan
+        aspectos relacionados con la comprensión del lenguaje y las emociones.
+        Sin embargo, la integración de estos enfoques para desarrollar una IA
+        que comprenda el significado psicológico de las palabras es un campo en
+        desarrollo.
+      </p>
+      <ReferenceImage
+        imageUrl={images.mpathic.imageUrl}
+        description={images.mpathic.description}
+        linkUrl={images.mpathic.linkUrl}
+        floatDirection={images.mpathic.floatDirection}
+        width={images.mpathic.width}
+        minWidth={images.mpathic.minWidth}
+        variants={images.mpathic.variants}
+      />
+      <p>
+        <b>Antecedentes o investigaciones previas:</b> Existen estudios que abordan
+        la intersección entre IA y comprensión emocional. Por ejemplo, la empresa
+        <em>mpathic</em> ha desarrollado soluciones que analizan y evalúan la salud
+        de las conversaciones, proporcionando recomendaciones para aumentar la <b
+          >empatía</b
+        >, <b>confianza</b> y participación en tiempo real. Además, la Universidad
+        del País Vasco lidera el proyecto europeo CRYSTAL, que busca desarrollar
+        sistemas conversacionales inteligentes para el <em>apoyo emocional</em> y
+        la asistencia al cliente, enfocándose en la automatización de centros de
+        atención telefónica.
+      </p>
+    </section>
+    <hr />
+    <section>
+      <h2 id="justificacion" class="text-2xl font-semibold mb-2">
+        Justificación
+      </h2>
+      <ReferenceImage
+        imageUrl={images.Lud.imageUrl}
+        description={images.Lud.description}
+        linkUrl={images.Lud.linkUrl}
+        floatDirection={images.Lud.floatDirection}
+        width={images.Lud.width}
+        minWidth={images.Lud.minWidth}
+        variants={images.Lud.variants}
+      />
+      <p>
+        Esta investigación parte de la necesidad de mejorar la comprensión entre
+        los seres humanos. Como sociedad, el lenguaje ha sido nuestra principal
+        herramienta de comunicación, pero presenta limitaciones debido a su
+        evolución histórica y a la diversidad de interpretaciones personales.
+        Las palabras no tienen un significado absoluto; su interpretación varía
+        según el contexto cultural, personal y geográfico de cada individuo.
+        <b>Ludwig Wittgenstein</b> afirmó que "<em
+          >los límites de mi lenguaje son los límites de mi mundo</em
+        >", lo que implica que nuestra capacidad de entender la realidad está
+        condicionada por la forma en que nos comunicamos. Si bien el lenguaje
+        nos permite expresar ideas, su ambigüedad y variabilidad pueden generar <b
+          >malentendidos</b
+        > y <b>barreras</b> en la comunicación. El objetivo de este estudio es explorar
+        cómo la <b>inteligencia artificial</b>
+        puede ayudar a reducir estas diferencias en la comprensión del lenguaje,
+        permitiendo que una persona interprete con mayor precisión lo que otro intenta
+        expresar, más allá de la simple definición de las palabras. Si se logra este
+        avance, sería posible facilitar el acceso a información compleja y generar
+        interacciones más <b>empáticas</b> y <b>significativas</b>. Al romper
+        las barreras en la interpretación del lenguaje, podríamos desarrollar
+        sistemas capaces de contextualizar las palabras según la experiencia del
+        usuario, permitiendo una comunicación más clara y efectiva. Por estas
+        razones, este estudio se justifica en la necesidad de analizar y
+        desarrollar herramientas que reduzcan las limitaciones del lenguaje y
+        fomenten un entendimiento más preciso y universal.
+      </p>
+      <h3 id="impactos" class="text-xl font-semibold my-2">Impactos</h3>
+
+      <ul class="list-decimal ml-5">
+        <li>
+          <strong>Económico:</strong>
+          <ul>
+            <ReferenceImage
+              imageUrl={images.pubEf.imageUrl}
+              description={images.pubEf.description}
+              linkUrl={images.pubEf.linkUrl}
+              floatDirection={images.pubEf.floatDirection}
+              width={images.pubEf.width}
+              minWidth={images.pubEf.minWidth}
+              variants={images.pubEf.variants}
+            />
+            <li>
+              <strong>Publicidad Efectiva:</strong> La implementación de este conocimiento
+              generará una comprensión muy profunda de nuestras necesidades al analizar
+              nuestro “reflejo digital” (la IA que modela nuestra mente), generando
+              una publicidad más efectiva, lo cual sería nocivo de cara a la economía
+              personal del individuo.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Social:</strong>
+          <ul>
+            <li>
+              <strong>Mejora en la Comunicación Interpersonal:</strong> Un sistema
+              capaz de comprender el estado emocional de las personas facilitará
+              interacciones más empáticas, promoviendo una sociedad más empática.
+            </li>
+            <ReferenceImage
+              imageUrl={images.demoCon.imageUrl}
+              description={images.demoCon.description}
+              linkUrl={images.demoCon.linkUrl}
+              floatDirection={images.demoCon.floatDirection}
+              width={images.demoCon.width}
+              minWidth={images.demoCon.minWidth}
+              variants={images.demoCon.variants}
+            />
+            <li>
+              <strong>Acceso Democratizado al Conocimiento:</strong> Adaptar información
+              a las necesidades individuales hará más accesible el aprendizaje, especialmente
+              para quienes enfrentan barreras lingüísticas o cognitivas.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <strong>Ético y Legal:</strong>
+          <ul>
+            <li>
+              <strong>Privacidad:</strong> El uso de datos personales para entrenar
+              la IA plantea riesgos sobre la protección de información y la autonomía
+              individual, ya que si esta información es expuesta a terceros o personas
+              maliciosas pueden generar un mal uso de ellas.
+            </li>
+            <ReferenceImage
+              imageUrl={images.manipulacion.imageUrl}
+              description={images.manipulacion.description}
+              linkUrl={images.manipulacion.linkUrl}
+              floatDirection={images.manipulacion.floatDirection}
+              width={images.manipulacion.width}
+              minWidth={images.manipulacion.minWidth}
+              variants={images.manipulacion.variants}
+            />
+            <li>
+              <strong>Manipulación del Pensamiento:</strong> Un sistema con capacidad
+              para influir en la percepción emocional de los usuarios podría ser
+              explotado para la persuasión, propaganda o control ideológico.
+            </li>
+            <li>
+              <strong>Abuso de Poder:</strong> Empresas, gobiernos o personas con
+              acceso a esta tecnología podrían utilizarla para manipular conductas,
+              explotar vulnerabilidades emocionales o aplicar sesgos en la toma de
+              decisiones automatizadas.
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="preguntas-de-investigacion" class="text-2xl font-semibold mb-2">
+        Preguntas de Investigación
+      </h2>
+      <ul class="list-disc ml-6">
+        <li>
+          <em
+            >¿Es posible que una IA <b>intérprete con precisión</b> el significado
+            <b>psicológico y emocional</b> detrás de las palabras de un <b
+              >usuario</b
+            >?</em
+          >
+        </li>
+        <li>
+          <em
+            >¿Es ético que una IA <b
+              >tenga acceso y analice información personal</b
+            >
+            para <b>comprender el estado emocional</b> de un individuo?</em
+          >
+        </li>
+        <li>
+          <em
+            >¿Qué <b>tipo de datos y algoritmos</b> serían necesarios para que la
+            IA logre esta <b>comprensión profunda</b>?</em
+          >
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="hipotesis" class="text-2xl font-semibold mb-2">Hipótesis</h2>
+      <p>
+        <b>Posibilidad de interpretación:</b>
+        Si se proporciona a la IA suficiente información contextual y personal sobre
+        el usuario, es posible que pueda interpretar con precisión el significado
+        psicológico de sus palabras. Esto se basa en la capacidad de los <b
+          >modelos de lenguaje de gran tamaño (LLM)</b
+        > para predecir emociones a partir de textos, como se ha demostrado en investigaciones
+        previas.
+      </p>
+      <ReferenceImage
+        imageUrl={images.digiRex.imageUrl}
+        description={images.digiRex.description}
+        linkUrl={images.digiRex.linkUrl}
+        floatDirection={images.digiRex.floatDirection}
+        width={images.digiRex.width}
+        minWidth={images.digiRex.minWidth}
+        variants={images.digiRex.variants}
+      />
+      <p>
+        <b>Implicaciones éticas y riesgos:</b>
+        Si se desarrolla una IA capaz de comprendernos al nivel de interpretar nuestras
+        emociones, esto podría volvernos altamente vulnerables a la manipulación.
+        Cualquier persona con acceso indebido a nuestro <em
+          >“reflejo digital”</em
+        > (la IA que modela nuestra mente) podría influir en nuestras decisiones
+        a un nivel profundo, afectando nuestra autonomía y bienestar psicológico.
+      </p>
+      <ReferenceImage
+        imageUrl={images.bigFive.imageUrl}
+        description={images.bigFive.description}
+        linkUrl={images.bigFive.linkUrl}
+        floatDirection={images.bigFive.floatDirection}
+        width={images.bigFive.width}
+        minWidth={images.bigFive.minWidth}
+        variants={images.bigFive.variants}
+      />
+      <p>
+        <b>Datos y algoritmos requeridos:</b>
+        Para comprender a un ser humano, una IA podría utilizar datos sobre interacciones,
+        preferencias y cambios emocionales a lo largo del tiempo. La personalidad
+        podría modelarse mediante enfoques como el <b>modelo Big Five</b> o el análisis
+        de estados emocionales. En términos de procesamiento, se pueden emplear redes
+        neuronales de memoria a largo plazo, transformers y aprendizaje profundo
+        por refuerzo. Actualmente, la mejor opción para generar respuestas sigue
+        siendo el texto, lo que permite el uso de modelos de lenguaje natural, análisis
+        de sentimiento y comprensión de contexto. Para la simulación de procesos
+        cognitivos, herramientas como redes bayesianas, modelos basados en agentes
+        o <em>teoría de la mente (ToM)</em> podrían ser clave en el desarrollo de
+        una IA más avanzada.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="marco-teorico" class="text-2xl font-semibold mb-2">
+        Marco Teórico
+      </h2>
+      <div class="space-y-4">
+        <ReferenceImage
+          imageUrl={images.Ia.imageUrl}
+          description={images.Ia.description}
+          linkUrl={images.Ia.linkUrl}
+          floatDirection={images.Ia.floatDirection}
+          width={images.Ia.width}
+          minWidth={images.Ia.minWidth}
+          variants={images.Ia.variants}
+        />
+        <p>
+          <b>Introducción</b><br />
+          En la última década, la <em>inteligencia artificial (IA)</em> ha sido objeto
+          de un debate constante, destacándose tanto por sus beneficios como por
+          sus posibles perjuicios. Aunque actualmente existen múltiples aplicaciones
+          de la IA que mejoran la productividad, todavía no hemos presenciado un
+          cambio significativo en la calidad de vida. Seguimos lejos de eliminar
+          por completo los errores humanos en casos críticos, como en procedimientos
+          médicos complejos o en la conducción autónoma. Si bien en este último campo
+          se ha avanzado considerablemente, aún estamos a medio camino de alcanzar
+          la meta.<br /><br />
+          Esta investigación explora la posibilidad de utilizar la IA para mejorar
+          la comunicación humana. El objetivo es que la IA sea capaz de interpretar
+          el <em>significado psicológico y emocional</em> detrás de las palabras,
+          facilitando la interacción, especialmente para personas con <b
+            >dificultades léxicas</b
+          >, permitiéndoles expresarse con mayor precisión y comprensión mutua.<br
+          /><br />
+          <b>Desarrollo</b><br />
+          <b>1. Comunicación y Pensamiento</b><br />
+          <ReferenceImage
+            imageUrl={images.psico.imageUrl}
+            description={images.psico.description}
+            linkUrl={images.psico.linkUrl}
+            floatDirection={images.psico.floatDirection}
+            width={images.psico.width}
+            minWidth={images.psico.minWidth}
+            variants={images.psico.variants}
+          />
+          La comunicación es una manifestación directa del pensamiento humano. Según
+          el
+          <a
+            href="https://cognicion.psico.edu.uy/5"
+            class="text-blue-500 hover:cursor-help"
+            target="_blank"
+            ><em>Manual de introducción a la psicología cognitiva</em></a
+          >, el lenguaje no solo es un medio de expresión, sino que también
+          refleja la estructura interna del pensamiento. Para que una IA pueda
+          interpretar emociones humanas, debe ser capaz de <b
+            >pensar como nosotros</b
+          >, o al menos simularlo. Esto implica que la IA debe poseer
+          capacidades tanto de comunicación receptiva (comprensión) como
+          comunicación expresiva (emisión), como lo describe <em
+            >ECG (Estimulación Cognitiva Global)</em
+          > en su artículo <a
+            href="https://dianoia.filosoficas.unam.mx/index.php/dianoia/article/download/420/D50/437"
+            class="text-blue-500 hover:cursor-help"
+            target="_blank"
+          >
+            <b>La función cognitiva "Lenguaje" y sus componentes</b>
+          </a><br /><br />
+          <b>2. Psicología Cognitiva y Psicolingüística</b><br />
+          <ReferenceImage
+            imageUrl={images.psicoLe.imageUrl}
+            description={images.psicoLe.description}
+            linkUrl={images.psicoLe.linkUrl}
+            floatDirection={images.psicoLe.floatDirection}
+            width={images.psicoLe.width}
+            minWidth={images.psicoLe.minWidth}
+            variants={images.psicoLe.variants}
+          />
+          Para que la IA logre comprender el trasfondo psicológico del lenguaje,
+          debe estar fundamentada en dos disciplinas clave:<br />
+          <b>Psicología Cognitiva:</b> Esta rama estudia los procesos mentales relacionados
+          con el razonamiento, la asimilación de conocimientos y la resolución de
+          problemas. De acuerdo con la <a
+            href="https://www.unir.net/revista/educacion/psicologia-cognitiva/"
+            class="text-blue-500 hover:cursor-help"
+            target="_blank"
+          >
+            <b>Universidad Internacional de La Rioja (UNIR)</b>
+          </a>
+          , la psicología cognitiva analiza cómo las personas procesan la información
+          y toman decisiones. En el contexto de esta investigación, la IA debe simular
+          estos procesos para interpretar correctamente el <b>
+            <em>significado emocional y psicológico</em></b
+          > del lenguaje del usuario.<br /><br />
+          <b>Psicolingüística:</b> Complementaria a la psicología cognitiva, la psicolingüística
+          estudia cómo las personas procesan, comprenden y producen el lenguaje.
+          Según la <a
+            href="https://www.unir.net/revista/salud/psicolinguistica-psicologia-lenguaje/"
+            class="text-blue-500 hover:cursor-help"
+            target="_blank"
+          >
+            <b>UNIR</b>
+          </a>
+          , esta disciplina analiza la forma en que el cerebro humano asocia palabras
+          con significados y cómo las experiencias individuales moldean la interpretación
+          del lenguaje. Para la IA, esto implica no solo reconocer las palabras,
+          sino también comprender la carga emocional y contextual que las acompaña.<br
+          /><br />
+          <b>3. Semántica y Filosofía del Lenguaje</b><br />
+          <ReferenceImage
+            imageUrl={images.filoLe.imageUrl}
+            description={images.filoLe.description}
+            linkUrl={images.filoLe.linkUrl}
+            floatDirection={images.filoLe.floatDirection}
+            width={images.filoLe.width}
+            minWidth={images.filoLe.minWidth}
+            variants={images.filoLe.variants}
+          />
+          La interpretación correcta del lenguaje humano por parte de la IA requiere
+          un módulo de semántica. De acuerdo con <a
+            href="https://es.wikipedia.org/wiki/Filosof%C3%ADa_del_lenguaje"
+            class="text-blue-500 hover:cursor-help"
+            target="_blank"
+          >
+            <em>Wikipedia</em>
+          </a>
+          , la semántica es la rama de la filosofía del lenguaje que estudia la relación
+          entre el lenguaje y su significado. Esto implica que la IA debe estar equipada
+          con un sistema que le permita distinguir entre el significado literal y
+          el <b>significado contextual</b> de las palabras.<br />
+          Siguiendo la perspectiva del filósofo <b>Ludwig Wittgenstein</b>, el
+          significado de las palabras no solo depende de su definición, sino del
+          uso que les damos en un contexto social. Para que la IA pueda
+          comprender verdaderamente las emociones humanas, debe interpretar el "<em
+            >juego del lenguaje</em
+          >" del usuario, capturando no solo las palabras, sino también las
+          intenciones y emociones implícitas.<br /><br />
+          <b>4. Procesamiento del Lenguaje Natural (NLP)</b><br />
+          <ReferenceImage
+            imageUrl={images.natLen.imageUrl}
+            description={images.natLen.description}
+            linkUrl={images.natLen.linkUrl}
+            floatDirection={images.natLen.floatDirection}
+            width={images.natLen.width}
+            minWidth={images.natLen.minWidth}
+            variants={images.natLen.variants}
+          />
+          Para traducir el lenguaje humano a datos comprensibles para una máquina,
+          la IA debe utilizar técnicas de <em
+            >Procesamiento del Lenguaje Natural (NLP)</em
+          >. Según <a
+            href="https://aws.amazon.com/es/what-is/nlp/"
+            class="text-blue-500 hover:cursor-help"
+            target="_blank"
+          >
+            <b>Amazon Web Services (AWS)</b>
+          </a>
+          , el NLP es una tecnología de machine learning que permite a las computadoras
+          interpretar, manipular y comprender el lenguaje humano. Esta herramienta
+          es fundamental para que la IA convierta las interacciones humanas en datos
+          computables, facilitando la interpretación de emociones y significados
+          detrás del lenguaje.<br /><br />
+          <b>5. Aplicaciones Prácticas y Éticas</b><br />
+          El propósito de esta investigación es identificar las herramientas necesarias
+          para simular los módulos mencionados (<b>psicología cognitiva</b>, <b
+            >psicolingüística</b
+          > y <b>semántica</b>) en una IA. Además, busca analizar las <b
+            >implicaciones éticas</b
+          > asociadas con la creación de un sistema capaz de interpretar emociones
+          humanas, tales como la <b>privacidad de los datos</b> y el potencial abuso
+          por parte de personas en posiciones de poder.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2 id="glosario" class="text-2xl font-semibold mb-2">Glosario</h2>
+      <ul class="list-disc ml-6 space-y-1">
+        <li>
+          <a
+            href="https://es.wikipedia.org/wiki/Inteligencia_artificial"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+          >
+            <b>Inteligencia Artificial (IA):</b>
+          </a>
+          Rama de la informática que desarrolla sistemas capaces de realizar tareas
+          que requieren inteligencia humana, como el reconocimiento de patrones o
+          la toma de decisiones.
+        </li>
+        <li>
+          <a
+            href="https://es.wikipedia.org/wiki/Comunicación"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+          >
+            <b>Comunicación receptiva:</b>
+          </a>
+          Capacidad de comprender el lenguaje emitido por otros.
+        </li>
+        <li>
+          <a
+            href="https://es.wikipedia.org/wiki/Comunicación"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+          >
+            <b>Comunicación expresiva:</b>
+          </a>
+          Habilidad para expresar pensamientos, ideas o emociones a través del lenguaje.
+        </li>
+        <li>
+          <a
+            href="https://es.wikipedia.org/wiki/Psicología_cognitiva"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+          >
+            <b>Psicología Cognitiva:</b>
+          </a>
+          Disciplina que estudia los procesos mentales relacionados con la percepción,
+          memoria, pensamiento y toma de decisiones.
+        </li>
+        <li>
+          <a
+            href="https://es.wikipedia.org/wiki/Psicolingüística"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+          >
+            <b>Psicolingüística:</b>
+          </a>
+          Estudio de los procesos mentales involucrados en la adquisición, producción
+          y comprensión del lenguaje.
+        </li>
+        <li>
+          <a
+            href="https://es.wikipedia.org/wiki/Semántica"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+          >
+            <b>Semántica:</b>
+          </a>
+          Rama de la lingüística y la filosofía del lenguaje que estudia el significado
+          de las palabras y las oraciones.
+        </li>
+        <li>
+          <a
+            href="https://es.wikipedia.org/wiki/Filosofía_del_lenguaje"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+          >
+            <b>Filosofía del Lenguaje:</b>
+          </a>
+          Rama de la filosofía que analiza la naturaleza, el origen y el uso del
+          lenguaje.
+        </li>
+        <li>
+          <a
+            href="https://es.wikipedia.org/wiki/Procesamiento_de_lenguaje_natural"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+          >
+            <b>NLP (Natural Language Processing):</b>
+          </a>
+          Tecnología de IA que permite a las máquinas comprender y procesar el lenguaje
+          humano.
+        </li>
+        <li>
+          <a
+            href="https://aws.amazon.com/es/what-is/nlp/"
+            class="text-blue-500 hover:cursor-help"
+            target="_blank"
+          >
+            <b>AWS (Amazon Web Services):</b>
+          </a>
+          Plataforma de servicios en la nube que ofrece soluciones de machine learning,
+          incluido el NLP.
+        </li>
+        <li>
+          <a
+            href="https://es.wikipedia.org/wiki/Ludwig_Wittgenstein"
+            class="text-blue-500 hover:cursor-help"
+          >
+            <b>Ludwig Wittgenstein:</b>
+          </a>
+          Filósofo austríaco-británico conocido por su teoría del lenguaje como un
+          "juego", donde las palabras adquieren significado según su uso en un contexto
+          social.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2 id="conclusion" class="text-2xl font-semibold mb-2">Conclusión</h2>
+      <p>
+        El marco teórico presentado establece las bases conceptuales necesarias
+        para desarrollar una IA capaz de interpretar <em>emociones humanas</em> a
+        partir del lenguaje. Se han abordado disciplinas como la <b
+          >psicología cognitiva</b
+        >, la <b>psicolingüística</b> y la <b>filosofía del lenguaje</b>,
+        fundamentales para simular procesos mentales humanos en un sistema
+        artificial. Además, se ha destacado la importancia del <em>NLP</em> como
+        herramienta clave para convertir el lenguaje humano en datos computables.<br
+        /><br />
+        Esta investigación no solo busca explorar las capacidades técnicas necesarias
+        para que la IA comprenda las <em>emociones humanas</em>, sino también
+        reflexionar sobre las <b>implicaciones éticas</b> y <b>sociales</b> que conlleva
+        su implementación. Finalmente, se resalta la relevancia de considerar la
+        <b>privacidad de los datos</b> y los posibles riesgos de manipulación derivados
+        de una IA con un entendimiento emocional profundo.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="viabilidad" class="text-2xl font-semibold mb-2">Viabilidad</h2>
+      <p>
+        A la fecha de este escrito, no se cuenta con conexiones o colaboraciones
+        en los ramos intelectuales necesarios para ejecutar la investigación de
+        forma práctica. Sin embargo, en cuanto a recursos materiales, se dispone
+        de un abanico amplio de opciones útiles que vuelven viable la
+        investigación si se le aplica un enfoque técnico capaz de identificar
+        las relaciones entre conceptos y temas. Actualmente, la información se
+        encuentra dispersa en diversas fuentes, por lo que el reto principal
+        consiste en encaminarla y articularla de manera coherente.<br /><br />
+        En el ámbito económico, esta investigación, al no tener un fin lucrativo
+        inmediato, puede desarrollarse teóricamente sin requerir inversión monetaria
+        significativa. No obstante, en caso de llevarse a la práctica, se podría
+        necesitar <b>equipo electrónico específico</b>. Este paso solo debería
+        considerarse una vez que la teoría haya sido debidamente validada. Por
+        ello, se requiere una <b>investigación previa</b>, profunda y detallada,
+        que respalde todos los fundamentos teóricos.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="validacion" class="text-2xl font-semibold mb-2">Validación</h2>
+      <p>
+        Para garantizar la fiabilidad de la investigación, es fundamental contar
+        con respaldo intelectual adecuado, así como con material informativo de
+        fuentes <b>confiables</b> y <b>reconocidas a nivel internacional</b>.
+        Esta investigación busca analizar la viabilidad de crear módulos de <b
+          >inteligencia artificial</b
+        > capaces de detectar <b>sentimientos</b> y <b>emociones</b> en la comunicación
+        humana. Por esta razón, todo lo expuesto debe ser no solo <em
+          >validado académicamente</em
+        >, sino también considerado viable desde diferentes perspectivas: <b
+          >tecnológica</b
+        >, <b>computacional</b>, <b>moral</b> y <b>ética</b>, antes de proceder
+        a cualquier implementación práctica del modelo descrito.
+      </p>
+    </section>
+
+    <section>
+      <h2 id="analisis-de-alternativas" class="text-2xl font-semibold mb-2">
+        Análisis de Alternativas de Solución
+      </h2>
+      <p class="indent-10">
+        Las posibles alternativas para estructurar y ejecutar una investigación
+        de este tipo son:
+      </p>
+
+      <h3><b>Investigación Aplicada:</b></h3>
+      <p>
+        Su objetivo es resolver problemas prácticos mediante la creación o
+        mejora de tecnologías. En este contexto, podría facilitar la
+        implementación real del modelo propuesto, si los resultados teóricos lo
+        permiten.
+      </p>
+
+      <h3><b>Investigación de Diseño:</b></h3>
+      <p>
+        Enfocada en la innovación y mejora de productos mediante un proceso
+        metódico, resulta útil para el desarrollo estructurado del modelo desde
+        una perspectiva técnica, asegurando su funcionalidad y viabilidad.
+      </p>
+      <em
+        >A continuación, se presenta una tabla comparativa entre ambos enfoques:</em
+      >
+
+      <table class="overflow-hidden shadow-md rounded-lg my-3">
+        <thead class="bg-gunmetal text-gray-50">
+          <tr class="">
+            <th>Criterio</th>
+            <th>Investigación Aplicada</th>
+            <th>Investigación de Diseño</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="bg-gray-100">
+            <td>Enfoque</td>
+            <td
+              >Resolver problemas concretos mediante la aplicación del
+              conocimiento.</td
+            >
+            <td>Innovar o mejorar productos, procesos o sistemas.</td>
+          </tr>
+          <tr class="bg-gray-300">
+            <td>Objetivo Principal</td>
+            <td>Implementación de soluciones prácticas.</td>
+            <td>Desarrollo estructurado y metodológico de soluciones.</td>
+          </tr>
+          <tr class="bg-gray-100">
+            <td>Ventajas</td>
+            <td
+              >Alta aplicabilidad, resultados tangibles, impacto social directo.</td
+            >
+            <td
+              >Permite desarrollar prototipos, fomenta la creatividad e
+              innovación.</td
+            >
+          </tr>
+          <tr class="bg-gray-300">
+            <td>Desventajas</td>
+            <td>Puede depender de recursos físicos o tecnológicos.</td>
+            <td
+              >Requiere conocimientos técnicos profundos y validación constante.</td
+            >
+          </tr>
+          <tr class="bg-gray-100">
+            <td>Aporte a esta investigación</td>
+            <td
+              >Facilitar la aplicación real de un sistema de IA para
+              comunicación emocional.</td
+            >
+            <td>Ayuda a estructurar un modelo funcional y replicable.</td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="indent-11">
+        Independientemente del tipo de investigación que se elija, esta debe
+        estar acompañada de un <b>estado del arte</b> completo y detallado, que proporcione
+        una base sólida de conocimientos relacionados con el tema. Esto permitirá
+        no solo contextualizar adecuadamente el problema, sino también identificar
+        vacíos existentes en el conocimiento actual, y explorar una amplia gama de
+        alternativas viables para la implementación futura de la investigación. Un
+        estado del arte riguroso garantiza que las decisiones <b>teóricas</b> y <b
+          >metodológicas</b
+        > estén fundamentadas, y que la investigación avance con claridad y pertinencia
+        hacia sus objetivos. Asimismo, permite una mayor integración entre <b
+          >teoría</b
+        > y <b>práctica</b>, lo cual es clave en proyectos que, como este,
+        exploran la posibilidad de integrar <b>inteligencia artificial</b> con dimensiones
+        humanas tan complejas como el <b>lenguaje</b>, la <b>emoción</b> y el <b
+          >pensamiento</b
+        >.
+      </p>
+    </section>
+    <section class="">
+      <h2 id="bibliografia" class="text-2xl font-semibold mb-2">
+        Bibliografía
+      </h2>
+      <ul class="list-disc ml-5 overflow-x-scroll">
+        <li>
+          <b>Amazon Web Services.</b> (s.f.). <i
+            >Procesamiento de lenguaje natural (PLN).</i
+          >
+          <a
+            href="https://aws.amazon.com/es/what-is/nlp/"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://aws.amazon.com/es/what-is/nlp/</a
+          >
+        </li>
+        <li>
+          <b>Estimulación Cognitiva.</b> (2017). <i
+            >La función cognitiva "lenguaje" y sus componentes.</i
+          >
+          <a
+            href="https://www.estimulacioncognitiva.info/2017/02/28/la-funci%C3%B3n-cognitiva-lenguaje-y-sus-componentes/"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://www.estimulacioncognitiva.info/2017/02/28/la-funci%C3%B3n-cognitiva-lenguaje-y-sus-componentes/</a
+          >
+        </li>
+        <li>
+          <b>Frapolli, M. J., & Romero, E.</b> (2014). <i
+            >Una aproximación a la filosofía del lenguaje.</i
+          > Lenguaje y Conocimiento. <a
+            href="https://lenguajeyconocimiento.files.wordpress.com/2014/04/una-aproximacic3b3n-a-la-filosofc3ada-del-lenguaje-maria-jose-frapolli-y-esther-romero.pdf"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://lenguajeyconocimiento.files.wordpress.com/2014/04/una-aproximacic3b3n-a-la-filosofc3ada-del-lenguaje-maria-jose-frapolli-y-esther-romero.pdf</a
+          >
+        </li>
+        <li>
+          <b>Gómez, P., & Ramírez, J.</b> (2017). <i
+            >Técnicas de reconocimiento automático de emociones.</i
+          > Revista Electrónica de Computación, Informática, Biomédica y Electrónica,
+          6(2), 45–58. <a
+            href="https://www.redalyc.org/pdf/2010/201017296007.pdf"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://www.redalyc.org/pdf/2010/201017296007.pdf</a
+          >
+        </li>
+        <li>
+          <b>Pereda, C.</b> (2000). <i
+            >La filosofía del lenguaje: Su naturaleza y su contexto.</i
+          > Dianoia, 45(1), 23–47. <a
+            href="https://dianoia.filosoficas.unam.mx/index.php/dianoia/article/download/420/D50/437"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://dianoia.filosoficas.unam.mx/index.php/dianoia/article/download/420/D50/437</a
+          >
+        </li>
+        <li>
+          <b>Sucar, L. E.</b> (2008). <i
+            >Redes bayesianas: Fundamentos y aplicaciones.</i
+          > Instituto Nacional de Astrofísica, Óptica y Electrónica (INAOE). <a
+            href="https://ccc.inaoep.mx/~esucar/Clases-mgp/caprb.pdf"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://ccc.inaoep.mx/~esucar/Clases-mgp/caprb.pdf</a
+          >
+        </li>
+        <li>
+          <b>Torres, R., & García, F.</b> (2023). <i
+            >Sistema híbrido para el análisis de sentimientos en llamadas
+            telefónicas.</i
+          > CORE Research Papers. <a
+            href="https://core.ac.uk/download/580479372.pdf"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://core.ac.uk/download/580479372.pdf</a
+          >
+        </li>
+        <li>
+          <b>Universidad de la República Uruguay.</b> (s.f.). <i
+            >Pensamiento y lenguaje - Manual de Psicología Cognitiva.</i
+          >
+          <a
+            href="https://cognicion.psico.edu.uy/5"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://cognicion.psico.edu.uy/5</a
+          >
+        </li>
+        <li>
+          <b>Universidad Internacional de La Rioja (UNIR).</b> (2023a). <i
+            >¿Qué es la psicología cognitiva? Características y objetivos.</i
+          >
+          <a
+            href="https://www.unir.net/revista/educacion/psicologia-cognitiva/"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://www.unir.net/revista/educacion/psicologia-cognitiva/</a
+          >
+        </li>
+        <li>
+          <b>Universidad Internacional de La Rioja (UNIR).</b> (2023b). <i
+            >Psicolingüística o Psicología del lenguaje, ¿en qué consiste?</i
+          >
+          <a
+            href="https://www.unir.net/revista/salud/psicolinguistica-psicologia-lenguaje/"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://www.unir.net/revista/salud/psicolinguistica-psicologia-lenguaje/</a
+          >
+        </li>
+        <li>
+          <b>Vega, L., & Miranda, A.</b> (2019). <i
+            >Hacia un clasificador automático de emociones en texto para el
+            español.</i
+          > CEUR Workshop Proceedings, 2425, 1–12. <a
+            href="https://ceur-ws.org/Vol-2425/paper25.pdf"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://ceur-ws.org/Vol-2425/paper25.pdf</a
+          >
+        </li>
+        <li>
+          <b>Wikipedia.</b> (s.f.). <i>Filosofía del lenguaje.</i>
+          <a
+            href="https://es.wikipedia.org/wiki/Filosof%C3%ADa_del_lenguaje"
+            target="_blank"
+            class="text-blue-500 hover:cursor-help"
+            >https://es.wikipedia.org/wiki/Filosof%C3%ADa_del_lenguaje</a
+          >
+        </li>
+      </ul>
+    </section>
+    <footer class="bg-cadet-gray text-gunmetal py-8 mt-12 rounded-2xl">
+      <Comments client:visible />
+      <section class="max-w-screen-lg mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div>
+            <h3 class="text-lg font-semibold">Contacto</h3>
+            <ul class="mt-4">
+              <li>
+                <a
+                  href="mailto:yefrasoft@hotmail.com"
+                  class="text-tekhelet hover:text-dark-purple"
+                  target="_blank"><b>yefrasoft@hotmail.com</b></a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/yefrasoft/" target="_blank"
+                  >Instagram</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Enlaces útiles</h3>
+          </div>
+          <div class="text-center md:text-right">
+            <p class="text-sm">
+              © 2025 Tu Nombre. Todos los derechos reservados.
+            </p>
+            <p class="text-xs text-gray-600 mt-2">
+              Este sitio está diseñado para proporcionar información sus
+              implicaciones o veracidad no estan delimitadas.
+            </p>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </main>
+</Layout>

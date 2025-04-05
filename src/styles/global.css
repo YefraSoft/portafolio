@@ -50,7 +50,26 @@
     --color-accent-900: #4c4642;
     --color-accent-950: #282422;
 
+    --color-gunmetal: #2f323aff;
+    --color-chinese-violet: #77567aff;
+    --color-cadet-gray: #9fa4a9ff;
+    --color-dark-spring-green: #307351ff;
+    --color-yellow-green: #bed558ff;
 
+    --color-midnight-blue: #18206fff;
+    --color-penn-blue: #17255aff;
+    --color-champagne: #f5e2c8ff;
+    --color-coral-pink: #d88373ff;
+    --color-cornell-red: #bd1e1eff;
+
+    --color-dark-purple: #331e36ff;
+    --color-tekhelet: #41337aff;
+    --color-air-superiority-blue: #6ea4bfff;
+    --color-mint-green: #c2efebff;
+    --color-honeydew: #ecfee8ff;
+
+
+    --shadow-hard: 4px 6px 0px rgba(0, 0, 0, 1);
 
     --font-Title: "Dosis", "Helvetica Neue";
     --font-Content: "Oxygen", "Helvetica Neue";
