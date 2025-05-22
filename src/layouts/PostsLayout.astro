@@ -1,11 +1,12 @@
 ---
 import "../styles/global.css";
+import Navbar from "../components/Navbar.astro";
 
 interface Props {
   title?: string;
-  background?: string;
+  descrip?: string;
 }
-const { title = "Systems Engineer", background } = Astro.props;
+const { title = "Systems Engineer", descrip } = Astro.props;
 ---
 
 <!doctype html>
@@ -15,7 +16,7 @@ const { title = "Systems Engineer", background } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta
       name="description"
-      content="Efrain Garcia, Systems Engineer and Game Developer. Specializing in Artificial Intelligence and game development. Explore my projects and writing."
+      content={descrip}
     />
     <meta name="robots" content="index, follow" />
     <meta
@@ -24,6 +25,10 @@ const { title = "Systems Engineer", background } = Astro.props;
     />
     <link rel="canonical" href="https://yefrasoft.netlify.app/" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/katex@0.16.4/dist/katex.min.css"
+    />
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
       rel="stylesheet"
@@ -36,12 +41,12 @@ const { title = "Systems Engineer", background } = Astro.props;
     />
 
     <meta name="generator" content={Astro.generator} />
-    <title> Yefrasoft - {title}</title>
+    <title>Yefrasoft - {title}</title>
   </head>
-  <body class={background}>
-    <!-- <Navbar /> -->
-    <slot />
+  <body class="">
+    <Navbar />
+    <div class="pt-18 container mx-auto">
+      <slot />
+    </div>
   </body>
 </html>
-
-<!-- coment: ctr + mayus + } -->
