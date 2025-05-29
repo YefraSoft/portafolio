@@ -37,29 +37,51 @@ const { rows }: Props = Astro.props;
   </thead>
   <tbody class="block mt-5 text-center font-Content">
     {
-      rows.map((row) => (
+      rows.map((row, index) => (
         <tr class="flex space-x-2 px-2 pb-3 text-xs md:text-lg">
           <td class="flex basis-6 items-center justify-center font-bold">
-            <p class="bg-orange-300 rounded-sm ring-2 ring-gray-700 p-1 shadow-orange-600 shadow-md">
+            <p
+              class={`rounded-sm ring-2 ring-gray-700 p-1 shadow-md ${
+                index % 2
+                  ? "bg-orange-300 shadow-orange-600"
+                  : "bg-orange-500 shadow-orange-800"
+              }`}
+            >
               {row.N}
             </p>
           </td>
           <td class="basis-2/5">
-            <div class="bg-cyan-300 rounded-xl ring-2 ring-gray-700 p-1 shadow-cyan-600 shadow-md ">
+            <div
+              class={`rounded-xl ring-2 ring-gray-700 p-1 shadow-md ${
+                index % 2
+                  ? "bg-cyan-300 shadow-cyan-600"
+                  : "bg-cyan-500 shadow-cyan-800"
+              }`}
+            >
               <h2 class="text-justify">
                 <strong>{row.Title}</strong>
               </h2>
             </div>
           </td>
           <td class="basis-2/5 text-justify">
-            <p class="bg-teal-300 rounded-xl ring-2 ring-gray-700 p-1 shadow-teal-600 shadow-md">
+            <p
+              class={`rounded-xl ring-2 ring-gray-700 p-1 shadow-md ${
+                index % 2
+                  ? "bg-teal-300 shadow-teal-600"
+                  : "bg-teal-600 shadow-teal-800"
+              }`}
+            >
               {row.Content}
             </p>
           </td>
           <td class="flex font-bold basis-1/5 justify-center items-center animate-wiggle animate-infinite">
             <a
               href={row.Link.href}
-              class="bg-indigo-300 rounded-xl ring-2 ring-gray-700 p-1 shadow-indigo-600 shadow-md"
+              class={`rounded-xl ring-2 ring-gray-700 p-1 shadow-md ${
+                index % 2
+                  ? "bg-indigo-300 shadow-indigo-600"
+                  : "bg-indigo-500 shadow-indigo-800"
+              }`}
             >
               &#128073; Leer aqui
             </a>
