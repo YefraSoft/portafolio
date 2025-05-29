@@ -77,7 +77,7 @@ Otros de sus objetivos son:
 <img 
   src="https://iieg.gob.mx/ns/wp-content/uploads/2024/06/Organigrama-2022-500x280.png" 
   alt="Organigrama 2025" 
-  class="mx-auto my-6 w-full max-w-xl rounded shadow"
+  class="mx-auto my-6 w-full max-w-2xl rounded shadow"
 />
 
 ### **¿Qué impulsó la creación del IIEG?**
@@ -167,19 +167,19 @@ En esta investigación, daremos el paso a paso para acceder al **Boletín Econó
 
   - Debemos ver lo siguiente:
 
-    <img src="https://i.imgur.com/ZQstcPf.png"alt="Imagen 1.1"class="mx-auto my-6 w-full max-w-xl rounded shadow"/>
+    <img src="https://i.imgur.com/ZQstcPf.png"alt="Imagen 1.1"class="mx-auto my-6 w-full max-w-2xl rounded shadow"/>
 
 - **Posicionar el puntero del mouse sobre la sección de "Economía" en el menú principal.**
 
   - Después, dar clic en _"Boletín económico mensual"_.
 
-    <img src="https://imgur.com/KfmnhRh.png" alt="Imagen 2.1" class="mx-auto my-6 w-full max-w-xl rounded shadow"/>
+    <img src="https://imgur.com/KfmnhRh.png" alt="Imagen 2.1" class="mx-auto my-6 w-full max-w-2xl rounded shadow"/>
 
 - **Seleccionar el boletín que sea de nuestro interés.**
 
   - En el apartado de _"Boletín mensual"_, al cargar se muestra el boletín más reciente. A la fecha de esta investigación, el boletín corresponde al mes de **abril**, e incluye información importante sobre por qué la población jalisciense **no viajó en Semana Santa**.
 
-    <img src="https://imgur.com/kIcR5KS.png" alt="Imagen 3.1" class="mx-auto my-6 w-full max-w-xl rounded shadow"/>
+    <img src="https://imgur.com/kIcR5KS.png" alt="Imagen 3.1" class="mx-auto my-6 w-full max-w-2xl rounded shadow"/>
 
   - A partir de aquí, podemos navegar por el histórico de boletines para buscar aquellos de nuestro interés, o bien, **descargar el boletín en formato PDF** para su posterior análisis.
 
