@@ -1,0 +1,594 @@
+---
+import Navbar from "../../components/Navbar.astro";
+import RatePost from "../../components/RatePost.astro";
+import Layout from "../../layouts/Layout.astro";
+
+const tema =
+  "🔎 Los tipos de datos necesarios para que una IA interprete el contexto sentimental de las palabras";
+const objetivo =
+  "🎯 Analizar la viabilidad de una IA que interprete emociones, intenciones y contexto en el lenguaje humano.";
+const justificacion =
+  "💡 Mejorar la comprensión y comunicación humana mediante IA, superando barreras y ambigüedades del lenguaje.";
+const hipotesis =
+  "🧩 Si la IA recibe suficiente contexto, puede interpretar con precisión el significado psicológico del usuario.";
+const analisis =
+  "📊 La IA podría mejorar la comunicación, pero existen riesgos éticos y de manipulación emocional.";
+---
+
+<Layout title="Análisis FODA IA y Psicología">
+  <Navbar />
+  <main class="container">
+    <br />
+    <section class="card" id="tema">
+      <h2>🔎 Tema</h2>
+      <p>
+        La capacidad de la inteligencia artificial para comprender el
+        significado psicológico de las palabras.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=800&q=80"
+        alt="IA y psicología"
+      />
+      <div class="caption">
+        <a
+          href="https://unsplash.com/photos/brain-artificial-intelligence-1517694712202-14dd9538aa97"
+          target="_blank">Imagen: IA y psicología</a
+        ><br />
+        Fuente: Unsplash
+      </div>
+    </section>
+    <br />
+    <section class="card" id="objetivo">
+      <h2>🎯 Objetivo</h2>
+      <p>
+        Analizar la viabilidad de una IA que interprete emociones, intenciones y
+        contexto en el lenguaje humano.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=800&q=80"
+        alt="IA interpretando emociones"
+      />
+      <div class="caption">
+        <a
+          href="https://unsplash.com/photos/emotion-ai-1465101046530-73398c7f28ca"
+          target="_blank">Imagen: IA interpretando emociones</a
+        ><br />
+        Fuente: Unsplash
+      </div>
+    </section>
+    <br />
+    <section class="card" id="justificacion">
+      <h2>💡 Justificación</h2>
+      <p>
+        Mejorar la comprensión y comunicación humana mediante IA, superando
+        barreras y ambigüedades del lenguaje.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80"
+        alt="Comunicación humana y tecnología"
+      />
+      <div class="caption">
+        <a
+          href="https://unsplash.com/photos/communication-technology-1506744038136-46273834b3fb"
+          target="_blank">Imagen: Comunicación humana y tecnología</a
+        ><br />
+        Fuente: Unsplash
+      </div>
+    </section>
+    <br />
+    <section class="card" id="hipotesis">
+      <h2>🧩 Hipótesis</h2>
+      <p>
+        Si la IA recibe suficiente contexto, puede interpretar con precisión el
+        significado psicológico del usuario.
+      </p>
+      <img
+        src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=800&q=80"
+        alt="Contexto y precisión en IA"
+      />
+      <div class="caption">
+        <a
+          href="https://unsplash.com/photos/context-ai-1519125323398-675f0ddb6308"
+          target="_blank">Imagen: Contexto y precisión en IA</a
+        ><br />
+        Fuente: Unsplash
+      </div>
+    </section>
+    <br />
+    <section class="card" id="analisis">
+      <h2>📊 Análisis de resultados</h2>
+      <p>
+        La IA podría mejorar la comunicación, pero existen riesgos éticos y de
+        manipulación emocional.
+      </p>
+      <img
+        src="https://i0.wp.com/revistaidees.cat/wp-content/uploads/2020/02/AAFF-REFLEXION-SOBRE-LA-ETICA-2000X800.jpg?fit=2000%2C800&ssl=1"
+        alt="Ética y manipulación en IA"
+      />
+      <div class="caption">
+        <a
+          href="https://unsplash.com/photos/ethics-ai-1465101178521-c1a2b1c6413c"
+          target="_blank">Imagen: Ética y manipulación en IA</a
+        ><br />
+        Fuente: Unsplash
+      </div>
+    </section>
+    <br />
+    <section class="grid" aria-label="cuadrantes FODA">
+      <article class="card" id="fortalezas">
+        <h2>Fortalezas</h2>
+        <ul>
+          <li>
+            <span class="icon">📚</span><span
+              >Puede ser la base para muchas investigaciones que ayuden la
+              comprensión del lenguaje.</span
+            >
+          </li>
+          <li>
+            <span class="icon">🧠</span><span
+              >El tema aborda una necesidad psicológica en las personas.</span
+            >
+          </li>
+          <li>
+            <span class="icon">💬</span><span
+              >Podría ayudar a la expresión de las ideas.</span
+            >
+          </li>
+          <li>
+            <span class="icon">♿</span><span
+              >Sería un puente para personas con discapacidad lingüística.</span
+            >
+          </li>
+        </ul>
+      </article>
+      <article class="card" id="oportunidades">
+        <h2>Oportunidades</h2>
+        <ul>
+          <li>
+            <span class="icon">📖</span><span
+              >Existe una gran cantidad de estudios psicológicos de la
+              comunicación.</span
+            >
+          </li>
+          <li>
+            <span class="icon">🔬</span><span
+              >Existe un interés genuino de la comunidad científica en conocer
+              los límites de la IA.</span
+            >
+          </li>
+          <li>
+            <span class="icon">📈</span><span
+              >Nos encontramos en el auge de estudios relacionados con la
+              inteligencia artificial.</span
+            >
+          </li>
+          <li>
+            <span class="icon">🏢</span><span
+              >Las empresas por diversos fines, se podrían interesar en una
+              investigación de este índole.</span
+            >
+          </li>
+        </ul>
+      </article>
+      <article class="card" id="debilidades">
+        <h2>Debilidades</h2>
+        <ul>
+          <li>
+            <span class="icon">🔋</span><span
+              >Puede que la tecnología actual no cuente con los recursos
+              necesarios para obtener los tipos de datos necesarios.</span
+            >
+          </li>
+          <li>
+            <span class="icon">📉</span><span
+              >Puede la información actual ser insuficiente para determinar los
+              datos necesarios.</span
+            >
+          </li>
+          <li>
+            <span class="icon">🌐</span><span
+              >La información disponible puede estar redactada en diferentes
+              lenguajes lo cual dificultaría su comprensión.</span
+            >
+          </li>
+          <li>
+            <span class="icon">❓</span><span
+              >La información obtenida puede no estar validada con un rigor
+              científico.</span
+            >
+          </li>
+        </ul>
+      </article>
+      <article class="card" id="amenazas">
+        <h2>Amenazas</h2>
+        <ul>
+          <li>
+            <span class="icon">⚖️</span><span
+              >Se pueden implicar dilemas éticos sobre la información que se
+              recabará.</span
+            >
+          </li>
+          <li>
+            <span class="icon">📜</span><span
+              >Las leyes de regulación de información pueden ser un problema.</span
+            >
+          </li>
+          <li>
+            <span class="icon">🔧</span><span
+              >Puede la información ser irrelevante si se consigue algún avance
+              tecnológico significativo.</span
+            >
+          </li>
+          <li>
+            <span class="icon">🤖</span><span
+              >Los algoritmos pueden no ser adaptables al formato de información
+              necesaria en la investigación.</span
+            >
+          </li>
+        </ul>
+      </article>
+    </section>
+    <section style="margin-top: 26px" aria-label="matriz de estrategias">
+      <article class="card" id="estrategias">
+        <div class="card-header">
+          <span class="badge">Matriz estratégica</span>
+          <h2>
+            <span class="icon">🔗</span>
+            Cruces FO, DO, FA, DA
+          </h2>
+        </div>
+        <ul class="points">
+          <li>
+            <span class="icon">✅</span><span
+              ><strong>FO:</strong> Aprovechar la base de investigaciones y el interés
+              científico para impulsar el desarrollo de IA que interprete el contexto
+              sentimental de las palabras.</span
+            >
+          </li>
+          <li>
+            <span class="icon">🛠️</span><span
+              ><strong>DO:</strong> Buscar colaboración internacional y financiamiento
+              para superar la falta de recursos y la diversidad de lenguajes en la
+              información disponible.</span
+            >
+          </li>
+          <li>
+            <span class="icon">🛡️</span><span
+              ><strong>FA:</strong> Utilizar el impacto social y psicológico del
+              proyecto para mitigar dilemas éticos y promover regulaciones adecuadas.</span
+            >
+          </li>
+          <li>
+            <span class="icon">🔄</span><span
+              ><strong>DA:</strong> Desarrollar protocolos de validación científica
+              y adaptación tecnológica para enfrentar la insuficiencia de datos y
+              los avances disruptivos.</span
+            >
+          </li>
+        </ul>
+      </article>
+    </section>
+    <div class="nav-buttons">
+      <button
+        class="nav-btn"
+        aria-label="Ir al tema anterior"
+        onclick="moverSeccion(-1)"
+      >
+        ⏪ Tema anterior
+      </button>
+      <button
+        class="nav-btn"
+        aria-label="Ir al siguiente tema"
+        onclick="moverSeccion(1)"
+      >
+        ⏩ Siguiente tema
+      </button>
+    </div>
+  </main>
+</Layout>
+
+<script type="module" is:inline>
+  document.addEventListener("DOMContentLoaded", () => {
+    const secciones = Array.from(
+      document.querySelectorAll("main.container > section")
+    );
+    let actual = 0;
+
+    window.moverSeccion = function (direccion) {
+      actual += direccion;
+      if (actual < 0) actual = 0;
+      if (actual >= secciones.length) actual = secciones.length - 1;
+      secciones[actual].scrollIntoView({ behavior: "smooth" });
+    };
+  });
+</script>
+
+<style>
+  :root {
+    --bg-1: #fde2e4;
+    --bg-2: #e2ece9;
+    --bg-3: #e9f0ff;
+    --accent-1: #f7b2bd;
+    --accent-2: #b8e0d2;
+    --accent-3: #c7d3ff;
+    --ink-1: #334155;
+    --ink-2: #475569;
+    --white: #ffffff;
+    --shadow: 0 10px 30px rgba(30, 41, 59, 0.12);
+    --radius: 24px;
+  }
+
+  /* Mejora de fuente: tamaño mayor y weight intermedio, usando 'Inter' como fuente principal */
+
+  body {
+    margin: 0;
+    color: var(--ink-1);
+    background: linear-gradient(120deg, var(--bg-1), var(--bg-2), var(--bg-3));
+    background-size: 300% 300%;
+    animation: bgShift 20s ease-in-out infinite;
+    font-size: 1.18rem; /* Más grande que el default */
+    font-weight: 500; /* Intermedio, no negrita */
+  }
+
+  @keyframes bgShift {
+    0%,
+    100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .container {
+    max-width: 1200px; /* Prioriza precentacionAnalisisFODA.html */
+    margin: 0 auto;
+    padding-top: 4rem;
+    padding-bottom: 6rem;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  @media (max-width: 900px) {
+    .grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: var(--radius);
+    padding: 22px 20px 18px 20px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    transition:
+      transform 0.25s ease,
+      box-shadow 0.25s ease;
+    isolation: isolate;
+  }
+
+  .card::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    z-index: -1;
+    border-radius: calc(var(--radius) + 2px);
+    background: conic-gradient(
+      from 180deg at 50% 50%,
+      var(--accent-1),
+      var(--accent-2),
+      var(--accent-3),
+      var(--accent-1)
+    );
+    filter: blur(18px);
+    opacity: 0.35;
+    transition: opacity 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(30, 41, 59, 0.18);
+  }
+
+  .card:hover::before {
+    opacity: 0.6;
+  }
+
+  .card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+  }
+
+  .card h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .badge {
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 0.825rem;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--accent-1), var(--accent-3));
+    color: #1f2937;
+    box-shadow: var(--shadow);
+    opacity: 0.9;
+  }
+
+  .card p,
+  .card ul {
+    font-size: 1.15rem; /* Más grande */
+    font-weight: 500;
+    color: var(--ink-2);
+  }
+
+  .card img {
+    display: block;
+    max-width: 100%; /* Prioriza tamaño pequeño */
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    margin: 12px auto 6px auto;
+    box-shadow: 0 4px 16px rgba(30, 41, 59, 0.09);
+  }
+
+  .caption {
+    font-size: 0.95rem;
+    color: var(--ink-2);
+    text-align: center;
+    margin-bottom: 8px;
+  }
+
+  ul.points {
+    margin: 12px 0 0 0;
+    padding: 0 0 0 2px;
+    list-style: none;
+    display: grid;
+    gap: 10px;
+  }
+
+  ul.points li {
+    display: grid;
+    grid-template-columns: 32px 1fr;
+    align-items: start;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid rgba(148, 163, 184, 0.25);
+    padding: 12px 12px;
+    border-radius: 14px;
+    animation: popIn 0.5s ease both;
+  }
+
+  @keyframes popIn {
+    from {
+      opacity: 0;
+      transform: translateY(8px) scale(0.98);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .icon {
+    display: inline-grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: linear-gradient(120deg, var(--accent-2), var(--accent-3));
+    box-shadow: 0 6px 18px rgba(99, 102, 241, 0.25);
+    font-size: 1.3em;
+    font-weight: 500;
+  }
+
+  .icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  footer {
+    padding: 32px 20px 60px;
+    text-align: center;
+    color: var(--ink-2);
+    font-size: 0.95rem;
+  }
+
+  .nav-buttons {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 16px 0 12px 0;
+    box-shadow: 0 -2px 18px rgba(30, 41, 59, 0.09);
+    z-index: 100;
+  }
+
+  .nav-btn {
+    padding: 12px 24px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(90deg, var(--accent-3), var(--accent-1));
+    color: #111827;
+    font-weight: 800;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    font-size: 1.12rem;
+    transition: transform 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+  }
+
+  .nav-btn:active {
+    transform: scale(0.98);
+  }
+
+  .to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    padding: 12px 14px;
+    border-radius: 14px;
+    border: none;
+    background: linear-gradient(90deg, var(--accent-3), var(--accent-1));
+    color: #111827;
+    font-weight: 800;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+
+  .to-top:hover {
+    transform: translateY(-3px) scale(1.02);
+  }
+
+  @media (max-width: 700px) {
+    .container {
+      padding: 8px;
+    }
+    .card {
+      padding: 14px 8px 12px 8px;
+    }
+    .card img {
+      max-width: 140px;
+    }
+    .nav-btn {
+      padding: 10px 12px;
+      font-size: 0.98rem;
+    }
+  }
+
+  @media print {
+    body {
+      background: #fff;
+    }
+    .hero {
+      padding: 12px 0 0;
+    }
+    .chips,
+    .nav-buttons,
+    .to-top {
+      display: none !important;
+    }
+    .card {
+      box-shadow: none;
+      border: 1px solid #cbd5e1;
+    }
+  }
+</style>

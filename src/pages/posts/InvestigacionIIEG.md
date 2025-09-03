@@ -9,7 +9,7 @@ description: Investigación descriptiva sobre el Instituto de Información Estad
 
 # Análisis del Instituto de Información Estadística y Geográfica de Jalisco (IIEG)
 
-<img src="https://www.tecmm.edu.mx/assets/images/logo/footer/Grupo%2010494.svg" alt="Escuela-logo" class="bg-violet-950 w-full md:w-1/2 mx-auto" />
+<img src="https://www.tecmm.edu.mx/assets/logoTsj-01-C9uJRbPl.png" alt="Escuela-logo" class="bg-violet-950 w-full md:w-1/2 mx-auto" />
 
 - **Autor:** _Eduardo Efrain Garcia Sarez_
 
