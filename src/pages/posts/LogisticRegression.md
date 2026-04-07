@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/PostsLayout.astro
-title: "Mi primer post"
+title: "Regresión Logística"
 ---
 
 # **Regresión Logística**

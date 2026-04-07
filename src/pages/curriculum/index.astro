@@ -1,124 +1,476 @@
 ---
+import Navbar from "../../components/Navbar.astro";
 import Layout from "../../layouts/Layout.astro";
-const desc =
-  "I am a software developer with over 8 years of experience in web and mobile development, with an academic background in Artificial Intelligence. I have used several programming languages, with my favorites being C#, Java, and C++, although my preference is C#. I am passionate about game development, as my goal is to convey my emotions through my creations. I have worked with tools such as React, MAUI, Spring, and Android Studio, and I am motivated to continue learning. Although I lack professional experience in development teams, I enjoy working in a collaborative environment.";
 ---
 
 <Layout title="Curriculum">
-  <header>
-    <section>
-      <h1>Efrain Garcia</h1>
-      <h2>Software Developer</h2>
-      <address>
-        <ul>
-          <li>Address: Zapopan, Jalisco.</li>
-          <li>
-            Phone: <a href="tel:+523313669421">3316369421</a>
-          </li>
-          <li>
-            E-Mail: <a href="mailto:yefrasoft@hotmail.com"
-              >yefrasoft@hotmail.com</a
-            >
-          </li>
-        </ul>
-      </address>
-      <nav>
-        <ul>
-          <li>
-            <a
-              href="https://www.linkedin.com/in/yefra"
-              target="_blank"
-              rel="noopener noreferrer">LinkedIn</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://www.instagram.com/yeff"
-              target="_blank"
-              rel="noopener noreferrer">Instagram</a
-            >
-          </li>
-          <li>
-            <a
-              href="https://github.com/yeff"
-              target="_blank"
-              rel="noopener noreferrer">GitHub</a
-            >
-          </li>
-        </ul>
-      </nav>
-    </section>
-  </header>
+  <Navbar/>
+  <div class="bg-gray-200  h-10"></div>
+  <div class="bg-gray-200 min-h-screen py-10 px-4">
+    <div
+    class="max-w-5xl mx-auto bg-white border-[15px] border-rose-100 rounded-lg shadow-lg"
+    >
+    <!-- HEADER -->
+    <header class="border-b border-gray-100">
+      <div class="grid md:grid-cols-[200px_1fr] gap-8 p-10">
+        <!-- FOTO -->
+        <figure class="flex flex-col items-center">
+          <img
+          src="https://res.cloudinary.com/yefrasoft/image/upload/v1743822052/profile_l5wsfc.webp"
+          alt="Eduardo Efraín García Suárez"
+          class="w-full max-w-[15rem] rounded-lg shadow-lg"
+          />
+        </figure>
 
-  <main>
-    <section>
-      <section>
-        <article>
-          <h3>About Me</h3>
-          <p>{desc}</p>
-        </article>
-        <article>
-          <h3>Hobbies</h3>
-          <ul>
-            <li>Photography</li>
-            <li>Cooking</li>
-            <li>Driving</li>
-          </ul>
-        </article>
-        <article>
-          <h3>Courses</h3>
-          <ul>
-            <li>Udemy 1</li>
-            <li>Udemy 2</li>
-            <li>Udemy 3</li>
-          </ul>
-        </article>
-      </section>
+          <!-- INFO -->
+          <div class="flex flex-col justify-center">
+            <h1
+              class="text-3xl md:text-5xl font-light tracking-widest text-blue-900 uppercase mb-2"
+            >
+              Eduardo Efraín García Suárez
+            </h1>
 
-      <aside>
-        <article>
-          <h3>Work Experience</h3>
-          <div>
-            <h4>Position</h4>
-            <time>2000 - 2015</time>
-            <strong>CompanyName</strong><br />
-            <p></p>
+            <p
+              class="text-sm uppercase font-bold tracking-wide text-gray-600 my-3"
+            >
+              Ingeniero en Sistemas
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-3 text-sm">
+              <div class="flex gap-2">
+                <span class="font-bold text-blue-900 uppercase min-w-fit">
+                  Dirección
+                </span>
+                <span class="text-gray-600">Zapopan, Jalisco</span>
+              </div>
+
+              <div class="flex gap-2">
+                <span class="font-bold text-blue-900 uppercase min-w-fit">
+                  GitHub
+                </span>
+                <span class="text-gray-600">YefraSoft</span>
+              </div>
+
+              <div class="flex gap-2">
+                <span class="font-bold text-blue-900 uppercase min-w-fit">
+                  Teléfono
+                </span>
+                <span class="text-gray-600">33 2961 1406</span>
+              </div>
+
+              <div class="flex gap-2">
+                <span class="font-bold text-blue-900 uppercase min-w-fit">
+                  Email
+                </span>
+                <span class="text-gray-600">petar_lalo@hotmail.com</span>
+              </div>
+            </div>
           </div>
-        </article>
+        </div>
 
-        <article>
-          <h3>Academic Formation</h3>
-          <div>
-            <h5>Grade</h5>
-            <time>2000 - 2003</time>
-            <strong>School</strong>
-          </div>
-        </article>
-      </aside>
-    </section>
-  </main>
-  <footer>
-    <section>
-        <h3>Skills</h3>
-        <div>
-            <strong>hard Skills</strong>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
+        <!-- INTRO -->
+        <div class="bg-gray-50 mx-4 mb-4 p-4 rounded">
+          <h2
+            class="text-xs font-bold text-blue-900 uppercase tracking-wider mb-2"
+          >
+            ¡Hola!
+          </h2>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            Soy desarrollador de software enfocado en backend y aplicaciones
+            multiplataforma, con experiencia en desarrollo de APIs REST, gestión
+            de bases de datos y construcción de aplicaciones completas
+            utilizando tecnologías como .NET MAUI, Spring Boot y React. He
+            desarrollado proyectos integrales que abarcan desde el diseño de
+            arquitectura hasta la implementación de funcionalidades clave como
+            autenticación, gestión de datos e integración entre sistemas.
+          </p>
         </div>
-        <div>
-            <strong>transeferuble Skills</strong>
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
+      </header>
+
+      <!-- CONTENIDO -->
+      <main class="grid md:grid-cols-[1fr_1.3fr] gap-10 p-10">
+        <!-- LEFT COLUMN -->
+        <aside class="space-y-10">
+          <!-- ESPECIALIDADES -->
+          <section>
+            <h3
+              class="text-xs font-bold text-blue-900 uppercase tracking-widest mb-5 pb-2 border-b-2 border-blue-900"
+            >
+              Especialidades
+            </h3>
+
+            <div class="grid grid-cols-3 gap-3 text-center">
+              <div class="p-3 bg-gray-50 border border-gray-200 rounded">
+                <div class="text-2xl mb-2">💻</div>
+                <p class="text-xs uppercase text-gray-600 font-medium">
+                  Desarrollo Desktop
+                </p>
+              </div>
+
+              <div class="p-3 bg-gray-50 border border-gray-200 rounded">
+                <div class="text-2xl mb-2">📱</div>
+                <p class="text-xs uppercase text-gray-600 font-medium">
+                  Apps Móviles
+                </p>
+              </div>
+
+              <div class="p-3 bg-gray-50 border border-gray-200 rounded">
+                <div class="text-2xl mb-2">🤖</div>
+                <p class="text-xs uppercase text-gray-600 font-medium">
+                  Machine Learning
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- CURSOS -->
+          <section>
+            <h3
+              class="text-xs font-bold text-blue-900 uppercase tracking-widest mb-5 pb-2 border-b-2 border-blue-900"
+            >
+              Cursos
+            </h3>
+
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li class="flex gap-2">
+                <span class="text-blue-900">•</span>
+                <span>Machine Learning - Proyecto en GitHub</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-900">•</span>
+                <span>Deep Learning - Proyecto en GitHub</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-900">•</span>
+                <span>Desarrollo con Spring Boot</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-900">•</span>
+                <span>React y Next.js</span>
+              </li>
             </ul>
+          </section>
+
+          <!-- HABILIDADES -->
+          <section>
+            <h3
+              class="text-xs font-bold text-blue-900 uppercase tracking-widest mb-5 pb-2 border-b-2 border-blue-900"
+            >
+              Habilidades
+            </h3>
+
+            <div class="space-y-4">
+              <!-- LENGUAJES -->
+              <div>
+                <h4 class="font-bold text-blue-900 text-sm mb-3">Lenguajes</h4>
+                <div class="space-y-2">
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-gray-600">C# / Java / Kotlin</span>
+                    <div class="flex gap-1">
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-gray-600">Kotlin</span>
+                    <div class="flex gap-1">
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                      <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-gray-600">HTML/CSS/JS</span>
+                    <div class="flex gap-1">
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-gray-600">C++</span>
+                    <div class="flex gap-1">
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                      <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                    </div>
+                  </div>
+                  <div class="flex justify-between items-center text-sm">
+                    <span class="text-gray-600">SQL</span>
+                    <div class="flex gap-1">
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-blue-900"></span>
+                      <span class="w-2 h-2 rounded-full bg-gray-300"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FRAMEWORKS -->
+              <div>
+                <h4 class="font-bold text-blue-900 text-sm mb-3">Frameworks</h4>
+                <ul class="space-y-1 text-sm text-gray-600">
+                  <li class="flex gap-2">
+                    <span class="text-blue-900">•</span>
+                    <span>.NET (MAUI, WPF)</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-blue-900">•</span>
+                    <span>Spring Boot</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-blue-900">•</span>
+                    <span>React / Next.js</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-blue-900">•</span>
+                    <span>Nest.js</span>
+                  </li>
+                  <li class="flex gap-2">
+                    <span class="text-blue-900">•</span>
+                    <span>JavaFX / Swing</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- SOFTWARE -->
+          <section>
+            <h3
+              class="text-xs font-bold text-blue-900 uppercase tracking-widest mb-5 pb-2 border-b-2 border-blue-900"
+            >
+              Software
+            </h3>
+
+            <ul class="space-y-2 text-sm text-gray-600">
+              <li class="flex gap-2">
+                <span class="text-blue-900">•</span>
+                <span>SQL Server</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-900">•</span>
+                <span>MySQL</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-900">•</span>
+                <span>Git</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-900">•</span>
+                <span>Microsoft Office</span>
+              </li>
+              <li class="flex gap-2">
+                <span class="text-blue-900">•</span>
+                <span>ClickUp</span>
+              </li>
+            </ul>
+          </section>
+        </aside>
+
+        <!-- RIGHT COLUMN -->
+        <div class="space-y-10">
+          <!-- EXPERIENCIA -->
+          <section>
+            <h3
+              class="text-xs font-bold text-blue-900 uppercase tracking-widest mb-5 pb-2 border-b-2 border-blue-900"
+            >
+              Experiencia
+            </h3>
+
+            <div class="space-y-6">
+              <!-- EXPERIENCIA 1 -->
+              <article>
+                <h4 class="font-bold text-blue-900 text-sm mb-1">
+                  Operador de Producción
+                </h4>
+                <p class="text-xs uppercase text-gray-500 font-medium mb-1">
+                  Jabil Mexico
+                </p>
+                <p class="text-xs text-gray-400 mb-3">
+                  Enero 2024 - Julio 2024
+                </p>
+              </article>
+
+              <!-- EXPERIENCIA 2 -->
+              <article>
+                <h4 class="font-bold text-blue-900 text-sm mb-1">
+                  Gestor de Cobranza
+                </h4>
+                <p class="text-xs uppercase text-gray-500 font-medium mb-1">
+                  Banco Azteca
+                </p>
+                <p class="text-xs text-gray-400 mb-3">
+                  Abril 2018 - Abril 2021
+                </p>
+              </article>
+            </div>
+          </section>
+
+          <!-- FORMACIÓN -->
+          <section>
+            <h3
+              class="text-xs font-bold text-blue-900 uppercase tracking-widest mb-5 pb-2 border-b-2 border-blue-900"
+            >
+              Formación
+            </h3>
+
+            <div class="space-y-5">
+              <!-- FORMACIÓN 1 -->
+              <article>
+                <h4 class="font-bold text-blue-900 text-sm mb-1">
+                  Ingeniería en Sistemas Computacionales
+                </h4>
+                <p class="text-xs uppercase text-gray-500 font-medium mb-1">
+                  Tecnológico Superior de Jalisco
+                </p>
+                <p class="text-xs text-gray-400">Pasante</p>
+              </article>
+
+              <!-- FORMACIÓN 2 -->
+              <article>
+                <h4 class="font-bold text-blue-900 text-sm mb-1">
+                  Técnico en Informática
+                </h4>
+                <p class="text-xs uppercase text-gray-500 font-medium mb-1">
+                  CONALEP Apatzingán 085
+                </p>
+                <p class="text-xs text-gray-400">Graduado en 2018</p>
+              </article>
+            </div>
+          </section>
+
+          <!-- PROYECTOS -->
+          <section>
+            <h3
+              class="text-xs font-bold text-blue-900 uppercase tracking-widest mb-5 pb-2 border-b-2 border-blue-900"
+            >
+              Proyectos
+            </h3>
+
+            <div class="space-y-4">
+              <article>
+                <h4 class="font-bold text-blue-900 text-sm mb-2">
+                  Fundación Dirección Correcta
+                </h4>
+                
+                <p class="text-xs text-gray-600 leading-relaxed mb-3">
+                  Plataforma web de donaciones enfocada en conectar donantes e instituciones con énfasis en transparencia, accesibilidad y seguridad.
+                </p>
+
+                <div class="mb-3">
+                  <p class="text-xs font-medium text-blue-900 mb-2">Rol: Líder de proyecto y desarrollador frontend</p>
+                  <ul class="text-xs text-gray-600 space-y-1">
+                    <li class="flex gap-2">
+                      <span class="text-blue-900">•</span>
+                      <span>Liderazgo del proyecto y desarrollo frontend</span>
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-blue-900">•</span>
+                      <span>Construcción de interfaz moderna con Next.js 15 y Material Design</span>
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-blue-900">•</span>
+                      <span>Definición de módulos para donaciones, auditorías, blog y gestión de categorías</span>
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-blue-900">•</span>
+                      <span>Diseño de experiencia orientada a confianza del usuario y claridad en la información</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <p class="text-xs text-gray-500 mb-2">
+                  <strong class="text-blue-900">Tecnologías:</strong> Next.js 15, JavaScript/TypeScript, Material Design
+                </p>
+
+                <div class="space-y-1">
+                  <a
+                    href="https://github.com/YefraSoft/FundacionDireccionCorrecta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs text-gray-600 hover:text-blue-900 hover:underline break-all block"
+                  >
+                    📌 Repositorio: github.com/YefraSoft/FundacionDireccionCorrecta
+                  </a>
+                  <a
+                    href="https://yefrasoft.github.io/FundacionDireccionCorrecta/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs text-gray-600 hover:text-blue-900 hover:underline break-all block"
+                  >
+                    🌐 Demo: yefrasoft.github.io/FundacionDireccionCorrecta
+                  </a>
+                </div>
+              </article>
+
+              <article>
+                <h4 class="font-bold text-blue-900 text-sm mb-2">
+                  Lalo's Pizza - Sistema POS
+                </h4>
+                
+                <p class="text-xs text-gray-600 leading-relaxed mb-3">
+                  Sistema de punto de venta (POS) desktop para gestión de pizzerías con módulos de ventas, inventario, clientes y reportes.
+                </p>
+
+                <div class="mb-3">
+                  <ul class="text-xs text-gray-600 space-y-1">
+                    <li class="flex gap-2">
+                      <span class="text-blue-900">•</span>
+                      <span>Desarrollo con WPF y arquitectura MVVM</span>
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-blue-900">•</span>
+                      <span>Implementación de base de datos con Entity Framework Core y SQLite</span>
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-blue-900">•</span>
+                      <span>Diseño de sistema en capas con inyección de dependencias</span>
+                    </li>
+                    <li class="flex gap-2">
+                      <span class="text-blue-900">•</span>
+                      <span>Integración con impresoras térmicas para generación de tickets</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <p class="text-xs text-gray-500 mb-2">
+                  <strong class="text-blue-900">Tecnologías:</strong> C#, .NET, WPF, Entity Framework Core, SQLite
+                </p>
+
+                <div class="space-y-1">
+                  <a
+                    href="https://github.com/YefraSoft/lalospizzaproduction"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-xs text-gray-600 hover:text-blue-900 hover:underline break-all block"
+                  >
+                    📌 Repositorio: github.com/YefraSoft/lalospizzaproduction
+                  </a>
+                  <a
+                    href="/lalosPizza.zip"
+                    download
+                    class="text-xs text-gray-600 hover:text-blue-900 hover:underline block"
+                  >
+                    💾 Descargar: lalosPizza.zip
+                  </a>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
-    </section>
-    <section>
-        <h3>Software</h3>
-    </section>
-  </footer>
+      </main>
+    </div>
+  </div>
 </Layout>
